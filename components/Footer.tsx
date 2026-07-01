@@ -6,7 +6,6 @@ const footerLinks = [
   { href: "/services", label: "Services" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
-  { href: "/privacy", label: "Privacy" },
 ];
 
 const neighborhoods = [
