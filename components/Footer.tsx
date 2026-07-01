@@ -8,13 +8,6 @@ const footerLinks = [
   { href: "/contact", label: "Contact" },
 ];
 
-const neighborhoods = [
-  "Beacon Hill",
-  "Back Bay",
-  "South End",
-  "Brookline",
-  "Cambridge",
-];
 
 export default function Footer() {
   return (
@@ -69,26 +62,6 @@ export default function Footer() {
                 </Link>
               ))}
             </nav>
-          </div>
-
-          <div>
-            <p
-              className="text-[10px] uppercase tracking-[0.2em] mb-4"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
-            >
-              Serving
-            </p>
-            <ul className="flex flex-col gap-2">
-              {neighborhoods.map((n) => (
-                <li
-                  key={n}
-                  className="text-xs tracking-wide"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
-                >
-                  {n}
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div className="md:text-right">
