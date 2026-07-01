@@ -177,7 +177,7 @@ export default function ContactPage() {
                       style={{ ...inputBase, cursor: "pointer", paddingRight: "24px" }}
                     >
                       <option value="" disabled style={{ color: "var(--bhi-warm-gray)" }}>Select a service</option>
-                      <option value="Home Care">Home Care</option>
+                      <option value="Home Cleaning & Care">Home Cleaning &amp; Care</option>
                       <option value="Interior Painting & Refresh">Interior Painting &amp; Refresh</option>
                       <option value="Home Stewardship">Home Stewardship</option>
                       <option value="Not Sure Yet">Not Sure Yet</option>
