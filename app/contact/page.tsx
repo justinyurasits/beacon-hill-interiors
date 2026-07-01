@@ -30,6 +30,13 @@ const labelBase: React.CSSProperties = {
   marginBottom: "8px",
 };
 
+const credentials = [
+  "Licensed Construction Supervisor & General Contractor",
+  "Fully Insured — General Liability & Workers’ Comp",
+  "W-2 Employees — Never Day Laborers",
+  "Building-Compliant — All Boston Managed Properties",
+];
+
 export default function ContactPage() {
   const [state, handleSubmit] = useForm("mpqgyojq");
 
@@ -56,24 +63,46 @@ export default function ContactPage() {
         <div className="max-w-6xl mx-auto px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
 
-            {/* Left: copy */}
+            {/* Left: copy + credentials */}
             <div>
               <GoldRule className="mb-8" />
               <p
                 className="text-[16px] leading-[1.85] mb-6"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                If you&rsquo;re looking for a home services partner who will hold your
-                residence to a genuinely high standard, we&rsquo;d like to hear from you.
+                Every client relationship at Beacon Hill Interiors begins with a
+                conversation. We want to understand your home, your expectations,
+                and what a genuinely well-maintained residence means to you.
               </p>
               <p
-                className="text-[16px] leading-[1.85] mb-6"
+                className="text-[16px] leading-[1.85] mb-12"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                Fill out the form and we&rsquo;ll be in touch within one business day.
+                Fill out the form and we&rsquo;ll be in touch within one business day
+                to schedule a brief introductory call.
               </p>
+
+              {/* Credentials */}
+              <div className="flex flex-col gap-6 mb-10">
+                {credentials.map((cred) => (
+                  <div key={cred}>
+                    <GoldRule className="mb-4" />
+                    <p
+                      className="text-[13px] leading-[1.6]"
+                      style={{
+                        fontFamily: "var(--bhi-font-sans)",
+                        color: "var(--bhi-charcoal)",
+                        letterSpacing: "0.02em",
+                      }}
+                    >
+                      {cred}
+                    </p>
+                  </div>
+                ))}
+              </div>
+
               <p
-                className="text-[15px] leading-[1.75] italic"
+                className="text-[14px] leading-[1.75] italic"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
                 We are selective about new client relationships and may not be the
@@ -110,6 +139,18 @@ export default function ContactPage() {
                       style={inputBase}
                     />
                     <ValidationError field="name" prefix="Name" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />
+                  </div>
+
+                  {/* Phone */}
+                  <div>
+                    <label htmlFor="phone" style={labelBase}>Phone Number</label>
+                    <input
+                      id="phone"
+                      type="tel"
+                      name="phone"
+                      autoComplete="tel"
+                      style={inputBase}
+                    />
                   </div>
 
                   {/* Property */}
