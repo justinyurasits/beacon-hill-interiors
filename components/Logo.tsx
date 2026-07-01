@@ -1,9 +1,12 @@
+import React from "react";
+
 interface LogoProps {
   className?: string;
   height?: number;
+  style?: React.CSSProperties;
 }
 
-export default function Logo({ className = "", height = 32 }: LogoProps) {
+export default function Logo({ className = "", height = 32, style }: LogoProps) {
   const width = Math.round(height * (1346 / 2567.38));
   return (
     <svg
@@ -14,6 +17,7 @@ export default function Logo({ className = "", height = 32 }: LogoProps) {
       fill="currentColor"
       aria-hidden="true"
       className={className}
+      style={style}
     >
       <path d="M758.86,2360.86c-8.89-8.92-21.18-14.41-34.78-14.41h-102.16c-13.6,0-25.89,5.49-34.78,14.41-8.92,8.89-14.41,21.18-14.41,34.78,0,21.14,17.71,38.02,38.86,38.34,15.34.22,17.45,9.56,22.91,24.58,11.94,32.95,38.5,41.01,38.5,41.01,0,0,26.57-8.05,38.5-41.01,5.45-15.02,7.57-24.35,22.91-24.58,21.14-.32,38.86-17.2,38.86-38.34,0-13.6-5.49-25.89-14.41-34.78Z" />
       <g>
