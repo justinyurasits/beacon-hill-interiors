@@ -17,19 +17,19 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        {/* Charcoal overlay 45% */}
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.45)" }} />
+        {/* Charcoal overlay 55% */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.55)" }} />
 
         <div className="relative max-w-6xl mx-auto px-8 py-24 md:py-32 flex flex-col items-center text-center w-full">
-          <Logo height={48} className="text-bhi-white mb-10" />
+          <Logo height={48} className="text-bhi-white mb-10" style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.4))" }} />
 
-          <SectionLabel className="mb-8" style={{ color: "var(--bhi-gold)" }}>
+          <SectionLabel className="mb-8" style={{ color: "var(--bhi-white)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}>
             Private Home Services — Boston
           </SectionLabel>
 
           <h1
             className="text-[42px] md:text-[56px] lg:text-[64px] uppercase tracking-[0.06em] leading-[1.1] mb-8 max-w-3xl"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)" }}
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
             Your home deserves a higher standard.
           </h1>
@@ -37,8 +37,8 @@ export default function Home() {
           <GoldRule className="mb-8 w-full max-w-xs" />
 
           <p
-            className="text-[17px] leading-[1.8] mb-12 max-w-xl"
-            style={{ fontFamily: "var(--bhi-font)", color: "rgba(245,242,238,0.85)" }}
+            className="text-[18px] leading-[1.8] mb-12"
+            style={{ fontFamily: "var(--bhi-font)", color: "rgba(245,242,238,0.85)", maxWidth: "560px", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
             Beacon Hill Interiors provides private home care, interior painting,
             and residential refresh services for discerning homes in Boston&rsquo;s
