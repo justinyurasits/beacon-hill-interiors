@@ -17,8 +17,8 @@ export default function Home() {
           priority
           className="object-cover"
         />
-        {/* Charcoal overlay 55% */}
-        <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.55)" }} />
+        {/* Charcoal overlay 62% */}
+        <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.62)" }} />
 
         <div className="relative max-w-6xl mx-auto px-8 py-24 md:py-32 flex flex-col items-center text-center w-full">
           <Logo height={48} className="text-bhi-white mb-10" style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.4))" }} />
@@ -45,26 +45,24 @@ export default function Home() {
             finest neighborhoods.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center gap-6">
-            <Link
-              href="/contact"
-              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
-              style={{
-                fontFamily: "var(--bhi-font-sans)",
-                backgroundColor: "var(--bhi-white)",
-                color: "var(--bhi-charcoal)",
-              }}
-            >
-              Inquire About Your Home
-            </Link>
-            <p
-              className="text-xs italic"
-              style={{ fontFamily: "var(--bhi-font)", color: "rgba(245,242,238,0.7)" }}
-            >
-              We work by referral and take on a limited number of clients.
-              Availability is selective.
-            </p>
-          </div>
+          <Link
+            href="/contact"
+            className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
+            style={{
+              fontFamily: "var(--bhi-font-sans)",
+              backgroundColor: "var(--bhi-white)",
+              color: "var(--bhi-charcoal)",
+            }}
+          >
+            Inquire About Your Home
+          </Link>
+          <p
+            className="text-xs italic text-center mt-5"
+            style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.8)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
+          >
+            We work by referral and take on a limited number of clients.
+            Availability is selective.
+          </p>
         </div>
       </section>
 
