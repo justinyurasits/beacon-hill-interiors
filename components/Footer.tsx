@@ -72,8 +72,15 @@ export default function Footer() {
               Contact
             </p>
             <a
-              href="mailto:info@beaconhillinteriors.com"
+              href="tel:+17812278472"
               className="text-xs tracking-wide transition-opacity hover:opacity-60 block"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+            >
+              (781) 227-8472
+            </a>
+            <a
+              href="mailto:info@beaconhillinteriors.com"
+              className="text-xs tracking-wide transition-opacity hover:opacity-60 block mt-1"
               style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
             >
               info@beaconhillinteriors.com

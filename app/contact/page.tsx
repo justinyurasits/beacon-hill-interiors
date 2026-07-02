@@ -75,12 +75,19 @@ export default function ContactPage() {
                 and what a genuinely well-maintained residence means to you.
               </p>
               <p
-                className="text-[16px] leading-[1.85] mb-12"
+                className="text-[16px] leading-[1.85] mb-8"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
                 Fill out the form and we&rsquo;ll be in touch within one business day
                 to schedule a brief introductory call.
               </p>
+              <a
+                href="tel:+17812278472"
+                className="inline-block text-[15px] mb-12 transition-opacity hover:opacity-70"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
+              >
+                (781) 227-8472
+              </a>
 
               {/* Credentials */}
               <div className="flex flex-col gap-6 mb-10">
