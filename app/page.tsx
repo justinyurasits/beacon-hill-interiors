@@ -18,6 +18,8 @@ export default function Home() {
         />
         {/* Charcoal overlay 62% */}
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.62)" }} />
+        {/* Bottom gradient for text legibility */}
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to bottom, transparent 60%, rgba(0,0,0,0.55) 100%)" }} />
 
         <div className="relative max-w-6xl mx-auto px-8 py-24 md:py-32 flex flex-col items-center text-center w-full">
           <Logo height={48} className="text-bhi-white mb-10" style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.4))" }} />
@@ -57,13 +59,13 @@ export default function Home() {
           </Link>
           <p
             className="text-[11px] uppercase tracking-[0.2em] text-center mt-5"
-            style={{ fontFamily: "var(--bhi-font-sans)", color: "rgba(255,255,255,0.5)" }}
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "rgba(255,255,255,0.8)", textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
           >
             Licensed &middot; Fully Insured &middot; Workers&rsquo; Comp Certified &middot; Building-Compliant
           </p>
           <p
             className="text-[14px] italic text-center"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)", marginTop: "16px" }}
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)", marginTop: "16px", textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
           >
             Confidence Without Supervision.
           </p>
