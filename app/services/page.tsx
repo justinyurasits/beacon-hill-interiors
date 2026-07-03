@@ -87,16 +87,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── ACCENT IMAGE ─────────────────────────────────────────────── */}
-      <div className="relative w-full" style={{ height: "280px" }}>
-        <Image
-          src="/images/services.webp"
-          alt=""
-          fill
-          className="object-cover"
-        />
-      </div>
-
       {/* ── STICKY ANCHOR NAV ────────────────────────────────────────── */}
       <ServicesNav />
 
