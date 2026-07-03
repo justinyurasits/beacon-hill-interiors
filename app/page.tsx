@@ -56,35 +56,16 @@ export default function Home() {
             Inquire About Your Home
           </Link>
           <p
-            className="text-xs italic text-center mt-5"
-            style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.8)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
+            className="text-[11px] uppercase tracking-[0.2em] text-center mt-5"
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "rgba(255,255,255,0.5)" }}
           >
-            Selective clientele &middot; Licensed &amp; insured &middot; Building-compliant
+            Licensed &middot; Fully Insured &middot; Workers&rsquo; Comp Certified &middot; Building-Compliant
           </p>
           <p
             className="text-[14px] italic text-center"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)", marginTop: "16px" }}
           >
             Confidence Without Supervision.
-          </p>
-        </div>
-      </section>
-
-      {/* ── TRUST BAR ────────────────────────────────────────────────── */}
-      <section
-        className="py-5"
-        style={{
-          backgroundColor: "var(--bhi-linen)",
-          borderTop: "0.5px solid var(--bhi-sand)",
-          borderBottom: "0.5px solid var(--bhi-sand)",
-        }}
-      >
-        <div className="max-w-6xl mx-auto px-8 flex flex-col items-center">
-          <p
-            className="text-center text-[10px] uppercase tracking-[0.2em]"
-            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
-          >
-            Licensed &middot; Fully Insured &middot; Workers&rsquo; Comp Certified &middot; Building-Compliant
           </p>
         </div>
       </section>
