@@ -84,7 +84,7 @@ export default function Home() {
       </section>
 
       {/* ── CONFIDENCE LINE ──────────────────────────────────────────── */}
-      <section className="bg-bhi-white py-10">
+      <section className="bg-bhi-white py-6">
         <div className="max-w-2xl mx-auto px-8 flex flex-col items-center">
           <GoldRule className="w-full mb-8" />
           <p
