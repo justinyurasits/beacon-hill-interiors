@@ -103,13 +103,7 @@ export default function Home() {
               {
                 href: "/services#interior-care",
                 name: "Interior Care & Cleaning",
-                icon: (
-                  <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M10 26 L16 10 L18 10 L20 6 L24 8 L22 12 L20 10 L16 26 Z" />
-                    <path d="M10 26 Q8 28 10 30 Q14 30 14 26 Z" />
-                    <line x1="14" y1="18" x2="18" y2="16" />
-                  </svg>
-                ),
+                image: "/images/cleaning.webp",
                 bullets: [
                   "Recurring weekly or biweekly cleaning",
                   "Deep cleaning & seasonal resets",
@@ -120,14 +114,7 @@ export default function Home() {
               {
                 href: "/services#interior-refresh",
                 name: "Interior Painting & Refresh",
-                icon: (
-                  <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="14" y="4" width="10" height="7" rx="1" />
-                    <path d="M14 7 L6 7 L6 12 L14 12" />
-                    <line x1="19" y1="11" x2="19" y2="26" />
-                    <ellipse cx="19" cy="27" rx="3" ry="2" />
-                  </svg>
-                ),
+                image: "/images/painting.webp",
                 bullets: [
                   "Full room interior painting",
                   "Touch-ups, trim & millwork",
@@ -138,14 +125,7 @@ export default function Home() {
               {
                 href: "/services#stewardship",
                 name: "Private Home Services",
-                icon: (
-                  <svg viewBox="0 0 32 32" width="28" height="28" fill="none" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <path d="M5 14 L16 5 L27 14 L27 27 L5 27 Z" />
-                    <rect x="12" y="19" width="8" height="8" />
-                    <circle cx="22" cy="11" r="2.5" />
-                    <line x1="22" y1="13.5" x2="22" y2="17" />
-                  </svg>
-                ),
+                image: "/images/homeservices.webp",
                 bullets: [
                   "Vendor coordination & scheduling",
                   "Access management & building protocols",
@@ -156,56 +136,52 @@ export default function Home() {
             ].map((svc) => (
               <div
                 key={svc.name}
-                className="flex flex-col p-8 md:p-10"
+                className="flex flex-col"
                 style={{ border: "0.5px solid var(--bhi-sand)", backgroundColor: "var(--bhi-linen)" }}
               >
-                {/* Icon badge */}
-                <div
-                  className="flex items-center justify-center mb-7 shrink-0"
-                  style={{
-                    width: 64,
-                    height: 64,
-                    borderRadius: "50%",
-                    backgroundColor: "var(--bhi-charcoal)",
-                  }}
-                >
-                  {svc.icon}
+                {/* Photo */}
+                <div className="relative w-full shrink-0" style={{ height: 220 }}>
+                  <Image src={svc.image} alt="" fill className="object-cover" />
                 </div>
 
-                {/* Service name */}
-                <p
-                  className="text-[12px] uppercase tracking-[0.18em] mb-4"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-                >
-                  {svc.name}
-                </p>
-                <GoldRule className="mb-6" />
+                <div className="flex flex-col flex-1 px-8 pb-8">
+                  <GoldRule />
 
-                {/* Bullets */}
-                <ul className="flex flex-col gap-3 flex-1 mb-8">
-                  {svc.bullets.map((b) => (
-                    <li
-                      key={b}
-                      className="flex items-start gap-3 text-[16px] leading-[1.7]"
-                      style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                    >
-                      <span
-                        className="mt-[10px] shrink-0 block rounded-full"
-                        style={{ width: 3, height: 3, backgroundColor: "var(--bhi-gold)" }}
-                      />
-                      {b}
-                    </li>
-                  ))}
-                </ul>
+                  {/* Service name */}
+                  <p
+                    className="text-[11px] uppercase tracking-[0.18em] mt-6 mb-5"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+                  >
+                    {svc.name}
+                  </p>
 
-                {/* Ghost link */}
-                <Link
-                  href={svc.href}
-                  className="text-xs uppercase tracking-[0.18em] inline-flex items-center gap-2 transition-opacity hover:opacity-70"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
-                >
-                  Learn more <span aria-hidden="true">→</span>
-                </Link>
+                  {/* Bullets */}
+                  <ul className="flex flex-col gap-3 flex-1 mb-8">
+                    {svc.bullets.map((b) => (
+                      <li
+                        key={b}
+                        className="flex items-start gap-3 text-[16px] leading-[1.7]"
+                        style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                      >
+                        <span
+                          className="shrink-0 mt-[0.6em]"
+                          style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "12px", lineHeight: 1 }}
+                          aria-hidden="true"
+                        >—</span>
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+
+                  {/* Ghost link */}
+                  <Link
+                    href={svc.href}
+                    className="text-xs uppercase tracking-[0.18em] inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+                    style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                  >
+                    Learn more <span aria-hidden="true">→</span>
+                  </Link>
+                </div>
               </div>
             ))}
           </div>
