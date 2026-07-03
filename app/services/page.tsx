@@ -173,7 +173,7 @@ export default function ServicesPage() {
               </div>
 
               {/* Who it's for */}
-              <div className="pt-8" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
+              <div className="pt-8 mb-10" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
                 <p
                   className="text-[15px] leading-[1.75] italic max-w-2xl"
                   style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
@@ -181,6 +181,25 @@ export default function ServicesPage() {
                   {service.who}
                 </p>
               </div>
+
+              {/* CTA */}
+              <p
+                className="text-[14px] italic mb-5"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              >
+                Every engagement begins with a personal site visit.
+              </p>
+              <Link
+                href="/contact"
+                className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto text-center"
+                style={{
+                  fontFamily: "var(--bhi-font-sans)",
+                  backgroundColor: "var(--bhi-charcoal)",
+                  color: "var(--bhi-white)",
+                }}
+              >
+                Inquire About Your Home
+              </Link>
             </div>
           </section>
 
