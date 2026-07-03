@@ -137,7 +137,7 @@ export default function Home() {
 
                   {/* Service name */}
                   <p
-                    className="text-[11px] uppercase tracking-[0.18em] mt-6 mb-5"
+                    className="text-[13px] font-bold uppercase tracking-[0.22em] mt-8 mb-5"
                     style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
                   >
                     {svc.name}
