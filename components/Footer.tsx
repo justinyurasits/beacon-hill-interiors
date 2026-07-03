@@ -91,12 +91,6 @@ export default function Footer() {
             >
               Boston, Massachusetts
             </p>
-            <p
-              className="text-xs tracking-wide mt-1"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
-            >
-              55 Linwood St.
-            </p>
           </div>
         </div>
 

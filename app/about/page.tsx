@@ -24,6 +24,18 @@ const principles = [
     title: "The Standard Is the Standard",
     body: "The finish is the work. The last five percent gets the same attention as the first ninety-five. If it doesn't pass our inspection, it doesn't pass.",
   },
+  {
+    title: "Respect the Home",
+    body: "We move through every residence as if it were our own. Carefully, deliberately, and with full awareness of what we're trusted with.",
+  },
+  {
+    title: "Protect the Building",
+    body: "We understand managed buildings. Every job begins and ends with the protocols, protection, and access procedures that Boston's finest properties require.",
+  },
+  {
+    title: "Leave It Better Than We Found It",
+    body: "Not just cleaner, not just painted. Better. That is the measure we hold every engagement to.",
+  },
 ];
 
 export default function AboutPage() {

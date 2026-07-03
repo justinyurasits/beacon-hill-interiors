@@ -39,9 +39,9 @@ export default function Home() {
             className="text-[18px] leading-[1.8] mb-12"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(245,242,238,0.85)", maxWidth: "560px", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
-            Beacon Hill Interiors provides private home care, interior painting,
-            and residential refresh services for discerning homes in Boston&rsquo;s
-            finest neighborhoods.
+            Beacon Hill Interiors provides premium interior care, cleaning,
+            painting, and private home services for Boston residences that require
+            discretion, consistency, and professional oversight.
           </p>
 
           <Link
@@ -59,8 +59,7 @@ export default function Home() {
             className="text-xs italic text-center mt-5"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.8)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
-            We work by referral and take on a limited number of clients.
-            Availability is selective.
+            Selective clientele &middot; Licensed &amp; insured &middot; Building-compliant
           </p>
         </div>
       </section>
@@ -81,6 +80,20 @@ export default function Home() {
           >
             Licensed &middot; Fully Insured &middot; Workers&rsquo; Comp Certified &middot; Building-Compliant
           </p>
+        </div>
+      </section>
+
+      {/* ── CONFIDENCE LINE ──────────────────────────────────────────── */}
+      <section className="bg-bhi-white py-10">
+        <div className="max-w-2xl mx-auto px-8 flex flex-col items-center">
+          <GoldRule className="w-full mb-8" />
+          <p
+            className="text-[18px] md:text-[22px] italic text-center"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            Confidence Without Supervision.
+          </p>
+          <GoldRule className="w-full mt-8" />
         </div>
       </section>
 
@@ -207,21 +220,12 @@ export default function Home() {
               className="text-[16px] leading-[1.8]"
               style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
             >
-              Most home service providers in Boston operate informally — no business
-              registration, no liability coverage, no workers&rsquo; compensation. For the
-              homeowner, that means real exposure: to liability if someone is injured
-              in your home, to risk if something goes wrong, and to the buildings that
-              require proof of insurance before allowing any vendor through the service
-              entrance.
-            </p>
-            <p
-              className="text-[16px] leading-[1.8] mt-4"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-            >
-              Beacon Hill Interiors is built differently. Every engagement is backed
-              by a fully licensed, insured, and compliant operation — the kind that
-              Boston&rsquo;s most demanding residential buildings require, and the kind that
-              protects you completely.
+              Many home service arrangements are informal by nature. For discerning
+              homeowners — especially in managed Boston buildings — that creates
+              unnecessary risk, inconsistency, and administrative friction. Beacon
+              Hill Interiors was built to operate differently: licensed, insured,
+              workers&rsquo; comp certified, and familiar with the protocols required by
+              Boston&rsquo;s most demanding residential buildings.
             </p>
           </div>
 
@@ -241,7 +245,7 @@ export default function Home() {
               },
               {
                 title: "Building-Compliant",
-                body: "We know how Boston's managed buildings work: service entrances, elevator scheduling, protection requirements, COI requests. We handle all of it. Your building manager already knows how to work with us.",
+                body: "We know how to work with building managers, service entrances, elevator scheduling, protection requirements, and COI requests.",
               },
             ].map((cred) => (
               <div key={cred.title}>

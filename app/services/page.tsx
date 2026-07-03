@@ -228,6 +228,88 @@ export default function ServicesPage() {
         </div>
       ))}
 
+      {/* ── SCOPE SECTION ────────────────────────────────────────────── */}
+      <section className="bg-bhi-white py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-8">
+          <SectionLabel className="mb-6">Focused on Interiors</SectionLabel>
+          <h2
+            className="text-[28px] md:text-[36px] uppercase tracking-[0.06em] leading-[1.2] mb-8 max-w-xl"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+          >
+            Selective by design.
+          </h2>
+          <GoldRule className="mb-16 max-w-xs" />
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 mb-14">
+            {/* What we provide */}
+            <div>
+              <p
+                className="text-[10px] uppercase tracking-[0.2em] mb-7"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+              >
+                What we provide
+              </p>
+              <ul className="flex flex-col gap-4">
+                {[
+                  "Interior care & recurring cleaning",
+                  "Interior painting & cosmetic refresh",
+                  "Private home services & coordination",
+                  "Touch-ups, trim & finish work",
+                  "Light fixture & hardware upgrades",
+                  "Building-compliant access management",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-4 text-[16px] leading-[1.7]"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                  >
+                    <span style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "13px", marginTop: "0.2em", flexShrink: 0 }}>✓</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* What we don't do */}
+            <div>
+              <p
+                className="text-[10px] uppercase tracking-[0.2em] mb-7"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+              >
+                What we don&rsquo;t do
+              </p>
+              <ul className="flex flex-col gap-4">
+                {[
+                  "Roofing, siding, or exterior work",
+                  "Landscaping or outdoor projects",
+                  "Foundation or structural work",
+                  "Large-scale general contracting",
+                  "Handyman or ad-hoc single visits",
+                  "Commercial or non-residential properties",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-4 text-[16px] leading-[1.7]"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                  >
+                    <span style={{ color: "var(--bhi-sand)", fontFamily: "var(--bhi-font-sans)", fontSize: "13px", marginTop: "0.2em", flexShrink: 0 }}>✗</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <p
+            className="text-[15px] italic text-center max-w-2xl mx-auto"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            When appropriate, we can coordinate trusted specialists while remaining
+            focused on the interior experience.
+          </p>
+        </div>
+      </section>
+
       {/* ── CONTACT CTA ──────────────────────────────────────────────── */}
       <section
         className="py-24 md:py-32"

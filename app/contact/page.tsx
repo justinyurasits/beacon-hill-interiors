@@ -30,12 +30,6 @@ const labelBase: React.CSSProperties = {
   marginBottom: "8px",
 };
 
-const credentials = [
-  "Licensed Construction Supervisor & General Contractor",
-  "Fully Insured — General Liability & Workers’ Comp",
-  "W-2 Employees — Never Day Laborers",
-  "Building-Compliant — All Boston Managed Properties",
-];
 
 export default function ContactPage() {
   const [state, handleSubmit] = useForm("xdarwyzd");
@@ -90,22 +84,22 @@ export default function ContactPage() {
               </a>
 
               {/* Credentials */}
-              <div className="flex flex-col gap-6 mb-10">
-                {credentials.map((cred) => (
-                  <div key={cred}>
-                    <GoldRule className="mb-4" />
-                    <p
-                      className="text-[13px] leading-[1.6]"
-                      style={{
-                        fontFamily: "var(--bhi-font-sans)",
-                        color: "var(--bhi-charcoal)",
-                        letterSpacing: "0.02em",
-                      }}
-                    >
-                      {cred}
-                    </p>
-                  </div>
-                ))}
+              <div className="mb-10">
+                <GoldRule className="mb-6" />
+                <p
+                  className="text-[16px] leading-[1.8] mb-4"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+                >
+                  Before we enter your home, the details are handled.
+                </p>
+                <p
+                  className="text-[15px] leading-[1.75] italic"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                >
+                  Licensed construction background. Fully insured. Workers&rsquo; comp
+                  certified. Building-compliant for Boston&rsquo;s managed properties.
+                </p>
+                <GoldRule className="mt-6" />
               </div>
 
               <p
