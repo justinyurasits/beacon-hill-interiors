@@ -184,9 +184,9 @@ export default function ContactPage() {
                       style={{ ...inputBase, cursor: "pointer", paddingRight: "24px" }}
                     >
                       <option value="" disabled style={{ color: "var(--bhi-warm-gray)" }}>Select a service</option>
-                      <option value="Home Cleaning & Care">Home Cleaning &amp; Care</option>
+                      <option value="Interior Care & Cleaning">Interior Care &amp; Cleaning</option>
                       <option value="Interior Painting & Refresh">Interior Painting &amp; Refresh</option>
-                      <option value="Home Stewardship">Home Stewardship</option>
+                      <option value="Private Home Services">Private Home Services</option>
                       <option value="Not Sure Yet">Not Sure Yet</option>
                     </select>
                     <ValidationError field="service" prefix="Service" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />

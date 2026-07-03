@@ -3,13 +3,13 @@
 import { useState, useEffect } from "react";
 
 const links = [
-  { id: "home-care", number: "01", label: "Home Care" },
+  { id: "interior-care", number: "01", label: "Interior Care & Cleaning" },
   { id: "interior-refresh", number: "02", label: "Interior Painting & Refresh" },
-  { id: "stewardship", number: "03", label: "Home Stewardship" },
+  { id: "stewardship", number: "03", label: "Private Home Services" },
 ];
 
 export default function ServicesNav() {
-  const [active, setActive] = useState("home-care");
+  const [active, setActive] = useState("interior-care");
 
   useEffect(() => {
     const observers: IntersectionObserver[] = [];

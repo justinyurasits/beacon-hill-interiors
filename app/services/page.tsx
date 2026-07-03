@@ -13,9 +13,9 @@ export const metadata: Metadata = {
 
 const services = [
   {
-    id: "home-care",
+    id: "interior-care",
     number: "01",
-    title: "Home Care",
+    title: "Interior Care & Cleaning",
     tagline:
       "Premium recurring cleaning for residences that require more than the ordinary.",
     body: [
@@ -53,7 +53,7 @@ const services = [
   {
     id: "stewardship",
     number: "03",
-    title: "Home Stewardship",
+    title: "Private Home Services",
     tagline:
       "For owners who want their home fully attended to — without the coordination.",
     body: [
