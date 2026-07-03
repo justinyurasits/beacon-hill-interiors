@@ -61,6 +61,12 @@ export default function Home() {
           >
             Selective clientele &middot; Licensed &amp; insured &middot; Building-compliant
           </p>
+          <p
+            className="text-[14px] italic text-center"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)", marginTop: "16px" }}
+          >
+            Confidence Without Supervision.
+          </p>
         </div>
       </section>
 
@@ -80,20 +86,6 @@ export default function Home() {
           >
             Licensed &middot; Fully Insured &middot; Workers&rsquo; Comp Certified &middot; Building-Compliant
           </p>
-        </div>
-      </section>
-
-      {/* ── CONFIDENCE LINE ──────────────────────────────────────────── */}
-      <section className="bg-bhi-white py-6">
-        <div className="max-w-2xl mx-auto px-8 flex flex-col items-center">
-          <GoldRule className="w-full mb-8" />
-          <p
-            className="text-[18px] md:text-[22px] italic text-center"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            Confidence Without Supervision.
-          </p>
-          <GoldRule className="w-full mt-8" />
         </div>
       </section>
 
