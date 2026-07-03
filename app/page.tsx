@@ -202,147 +202,148 @@ export default function Home() {
       </section>
 
       {/* ── WHY BHI ──────────────────────────────────────────────────── */}
-      <section
-        className="py-24 md:py-32"
-        style={{ backgroundColor: "var(--bhi-linen)" }}
-      >
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="mb-16 max-w-2xl">
-            <SectionLabel className="mb-6">The Difference</SectionLabel>
-            <h2
-              className="text-[28px] md:text-[34px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-            >
-              Professional credentials. No exceptions.
-            </h2>
-            <GoldRule className="mb-8" />
-            <p
-              className="text-[16px] leading-[1.8]"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-            >
-              Many home service arrangements are informal by nature. For discerning
-              homeowners — especially in managed Boston buildings — that creates
-              unnecessary risk, inconsistency, and administrative friction. Beacon
-              Hill Interiors was built to operate differently: licensed, insured,
-              workers&rsquo; comp certified, and familiar with the protocols required by
-              Boston&rsquo;s most demanding residential buildings.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-x-16 md:gap-y-12 mb-14">
-            {[
-              {
-                title: "Licensed",
-                body: "Massachusetts licensed builder with deep experience in Boston's most complex residential buildings. We understand construction, surfaces, and building systems at a professional level.",
-              },
-              {
-                title: "Fully Insured",
-                body: "General liability coverage on every engagement. If anything goes wrong in your home, you are fully protected. No gray areas, no claims against your homeowner's policy.",
-              },
-              {
-                title: "Workers' Comp Certified",
-                body: "Our team members are W-2 employees covered by workers' compensation insurance. Required by Boston's most discerning buildings — and the right way to operate.",
-              },
-              {
-                title: "Building-Compliant",
-                body: "We know how to work with building managers, service entrances, elevator scheduling, protection requirements, and COI requests.",
-              },
-            ].map((cred) => (
-              <div key={cred.title}>
-                <GoldRule className="mb-5" />
-                <h3
-                  className="text-sm uppercase tracking-[0.15em] mb-3"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-                >
-                  {cred.title}
-                </h3>
-                <p
-                  className="text-[15px] leading-[1.75]"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                >
-                  {cred.body}
-                </p>
-              </div>
-            ))}
-          </div>
-
-          <p
-            className="text-[15px] italic"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+      <section style={{ backgroundColor: "var(--bhi-linen)" }}>
+        <div className="flex flex-col md:flex-row">
+          {/* Image — mobile: 220px tall; desktop: stretches to full section height */}
+          <div
+            className="relative w-full md:w-[40%] shrink-0"
+            style={{ minHeight: "220px" }}
           >
-            This is the standard your home — and your building — requires. It&rsquo;s the
-            only standard we operate to.
-          </p>
-        </div>
-      </section>
+            <Image src="/images/about.webp" alt="" fill className="object-cover" />
+          </div>
 
-      {/* ── ABOUT SNIPPET ────────────────────────────────────────────── */}
-      <section
-        className="py-24 md:py-32"
-        style={{ backgroundColor: "var(--bhi-linen)" }}
-      >
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
-            <div>
-              <SectionLabel className="mb-6">About Beacon Hill Interiors</SectionLabel>
+          {/* Content */}
+          <div className="flex-1 py-24 md:py-32 px-8 md:px-16">
+            <div className="mb-14">
+              <SectionLabel className="mb-6">The Difference</SectionLabel>
               <h2
                 className="text-[28px] md:text-[34px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
               >
-                Small by design. Exceptional by standard.
+                Professional credentials. No exceptions.
               </h2>
               <GoldRule className="mb-8" />
               <p
-                className="text-[16px] leading-[1.8] mb-6"
+                className="text-[16px] leading-[1.8]"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                Beacon Hill Interiors is a private home services firm serving a
-                select clientele across Boston&rsquo;s most distinguished neighborhoods.
+                Many home service arrangements are informal by nature. For discerning
+                homeowners — especially in managed Boston buildings — that creates
+                unnecessary risk, inconsistency, and administrative friction. Beacon
+                Hill Interiors was built to operate differently: licensed, insured,
+                workers&rsquo; comp certified, and familiar with the protocols required by
+                Boston&rsquo;s most demanding residential buildings.
               </p>
-              <p
-                className="text-[16px] leading-[1.8] mb-6"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                We were founded by a Massachusetts licensed builder with years of
-                experience working in Boston&rsquo;s premier residential buildings — Beacon
-                Hill brownstones, Back Bay condominiums, luxury high-rises in the heart
-                of the city. That background shapes everything about how we operate.
-              </p>
-              <p
-                className="text-[16px] leading-[1.8] mb-10"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                We are not a large company. We are not trying to be. Our model
-                is intentionally limited — a small number of clients, a carefully
-                selected team, and a standard of work that simply cannot be maintained
-                at volume.
-              </p>
-              <Link
-                href="/about"
-                className="text-xs uppercase tracking-[0.2em] inline-flex items-center gap-2 transition-opacity hover:opacity-70"
-                style={{
-                  fontFamily: "var(--bhi-font-sans)",
-                  color: "var(--bhi-charcoal)",
-                }}
-              >
-                Our story
-                <span aria-hidden="true">→</span>
-              </Link>
             </div>
 
-            <div className="flex flex-col justify-center">
-              <div
-                className="pl-8"
-                style={{ borderLeft: "0.5px solid var(--bhi-gold)" }}
-              >
-                <p
-                  className="text-[20px] md:text-[24px] leading-[1.6] italic"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-                >
-                  &ldquo;Quietly excellent. That&rsquo;s the only kind of work we do.&rdquo;
-                </p>
-              </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-x-12 md:gap-y-10 mb-14">
+              {[
+                {
+                  title: "Licensed",
+                  body: "Massachusetts licensed builder with deep experience in Boston's most complex residential buildings. We understand construction, surfaces, and building systems at a professional level.",
+                },
+                {
+                  title: "Fully Insured",
+                  body: "General liability coverage on every engagement. If anything goes wrong in your home, you are fully protected. No gray areas, no claims against your homeowner's policy.",
+                },
+                {
+                  title: "Workers' Comp Certified",
+                  body: "Our team members are W-2 employees covered by workers' compensation insurance. Required by Boston's most discerning buildings — and the right way to operate.",
+                },
+                {
+                  title: "Building-Compliant",
+                  body: "We know how to work with building managers, service entrances, elevator scheduling, protection requirements, and COI requests.",
+                },
+              ].map((cred) => (
+                <div key={cred.title}>
+                  <GoldRule className="mb-5" />
+                  <h3
+                    className="text-sm uppercase tracking-[0.15em] mb-3"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+                  >
+                    {cred.title}
+                  </h3>
+                  <p
+                    className="text-[15px] leading-[1.75]"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                  >
+                    {cred.body}
+                  </p>
+                </div>
+              ))}
             </div>
+
+            <p
+              className="text-[15px] italic"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              This is the standard your home — and your building — requires. It&rsquo;s the
+              only standard we operate to.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* ── ABOUT SNIPPET ────────────────────────────────────────────── */}
+      <section style={{ backgroundColor: "var(--bhi-linen)" }}>
+        <div className="flex flex-col md:flex-row">
+          {/* Text — mobile: first; desktop: 55% */}
+          <div className="flex-1 py-24 md:py-32 px-8 md:px-16 md:w-[55%]">
+            <SectionLabel className="mb-6">About Beacon Hill Interiors</SectionLabel>
+            <h2
+              className="text-[28px] md:text-[34px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              Small by design. Exceptional by standard.
+            </h2>
+            <GoldRule className="mb-8" />
+            <p
+              className="text-[16px] leading-[1.8] mb-6"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              Beacon Hill Interiors is a private home services firm serving a
+              select clientele across Boston&rsquo;s most distinguished neighborhoods.
+            </p>
+            <p
+              className="text-[16px] leading-[1.8] mb-6"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              We were founded by a Massachusetts licensed builder with years of
+              experience working in Boston&rsquo;s premier residential buildings — Beacon
+              Hill brownstones, Back Bay condominiums, luxury high-rises in the heart
+              of the city. That background shapes everything about how we operate.
+            </p>
+            <p
+              className="text-[16px] leading-[1.8] mb-10"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              We are not a large company. We are not trying to be. Our model
+              is intentionally limited — a small number of clients, a carefully
+              selected team, and a standard of work that simply cannot be maintained
+              at volume.
+            </p>
+            <Link
+              href="/about"
+              className="text-xs uppercase tracking-[0.2em] inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+              style={{
+                fontFamily: "var(--bhi-font-sans)",
+                color: "var(--bhi-charcoal)",
+              }}
+            >
+              Our story
+              <span aria-hidden="true">→</span>
+            </Link>
+          </div>
+
+          {/* Image — mobile: 220px below text; desktop: 45%, full section height */}
+          <div
+            className="relative w-full md:w-[45%] shrink-0"
+            style={{
+              minHeight: "220px",
+              border: "1px solid var(--bhi-sand)",
+            }}
+          >
+            <Image src="/images/services.webp" alt="" fill className="object-cover" />
           </div>
         </div>
       </section>
@@ -409,33 +410,51 @@ export default function Home() {
 
       {/* ── CONTACT CTA ──────────────────────────────────────────────── */}
       <section
-        className="py-24 md:py-32"
-        style={{ backgroundColor: "var(--bhi-linen)" }}
+        className="relative flex items-center"
+        style={{ minHeight: "280px" }}
       >
-        <div className="max-w-6xl mx-auto px-8">
+        {/* Background image */}
+        <Image
+          src="/images/hero.webp"
+          alt=""
+          fill
+          className="object-cover"
+        />
+        {/* 60% charcoal overlay */}
+        <div
+          className="absolute inset-0"
+          style={{ backgroundColor: "rgba(44,44,44,0.60)" }}
+        />
+        {/* Content */}
+        <div className="relative z-10 w-full py-24 md:py-32 px-8 md:px-16">
           <div className="max-w-2xl">
-            <SectionLabel className="mb-6">Get In Touch</SectionLabel>
+            <SectionLabel
+              className="mb-6"
+              style={{ color: "var(--bhi-white)" }}
+            >
+              Get In Touch
+            </SectionLabel>
             <h2
               className="text-[28px] md:text-[40px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)" }}
             >
               Taking on a limited number of new clients.
             </h2>
             <GoldRule className="mb-8" />
             <p
               className="text-[16px] leading-[1.8] mb-10"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.85)" }}
             >
               If you&rsquo;re looking for a home services partner who will hold your
               residence to a genuinely high standard, we&rsquo;d like to hear from you.
             </p>
             <Link
               href="/contact"
-              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
+              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto text-center md:text-left"
               style={{
                 fontFamily: "var(--bhi-font-sans)",
-                backgroundColor: "var(--bhi-charcoal)",
-                color: "var(--bhi-white)",
+                backgroundColor: "var(--bhi-white)",
+                color: "var(--bhi-charcoal)",
               }}
             >
               Inquire About Your Home
