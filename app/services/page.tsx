@@ -8,7 +8,7 @@ import ServicesNav from "@/components/ServicesNav";
 export const metadata: Metadata = {
   title: "Services — Beacon Hill Interiors",
   description:
-    "Private home care, interior painting and refresh, and stewardship for Boston's most discerning residences.",
+    "Interior care and cleaning, painting, and private home services for Boston's most discerning residences. Licensed, insured, and building-compliant.",
 };
 
 const services = [
@@ -16,18 +16,18 @@ const services = [
     id: "interior-care",
     number: "01",
     title: "Interior Care & Cleaning",
+    image: "/images/cleaning.webp",
     tagline:
       "Premium recurring cleaning for residences that require more than the ordinary.",
-    body: [
-      "Your home reflects who you are. We treat it accordingly. Our home care service is a private, recurring cleaning program built around your schedule, your preferences, and the specific needs of your residence.",
-      "No rotating crews. No shortcuts. The same trusted team, every time.",
-    ],
+    body: "Your home reflects who you are. We treat it accordingly — with a private, recurring cleaning program built around your schedule, your preferences, and the specific needs of your residence.",
     listLabel: "Included",
     items: [
-      "Full interior cleaning to a white-glove standard",
-      "Attention to detail in kitchens, baths, and living areas",
-      "Seasonal deep-clean options",
-      "Discreet, fully vetted service professionals",
+      "Recurring weekly or biweekly cleaning to a white-glove standard",
+      "Deep cleaning & seasonal resets",
+      "Attention to detail in kitchens, bathrooms, and living areas",
+      "Move-in / move-out preparation",
+      "Post-construction cleaning",
+      "Discreet scheduling built around your household",
     ],
     who: "Busy professionals and owners of Boston condominiums who expect their home maintained to an exceptional standard without having to think about it.",
   },
@@ -35,18 +35,18 @@ const services = [
     id: "interior-refresh",
     number: "02",
     title: "Interior Painting & Refresh",
+    image: "/images/painting.webp",
     tagline:
-      "Precise, clean, and completely turnkey — for homes that won’t tolerate mediocrity.",
-    body: [
-      "A fresh coat of paint is the highest-leverage improvement a residence can receive. Done well, it transforms a space. Done poorly, it shows immediately.",
-      "We handle painting and cosmetic interior refresh work with the same care we bring to everything else: meticulous preparation, premium materials, clean execution, and a finished result that looks exactly as it should.",
-    ],
-    listLabel: "Services include",
+      "Precise, clean, and completely turnkey — for homes that won't tolerate mediocrity.",
+    body: "A fresh coat of paint is the highest-leverage improvement a residence can receive. Done well, it transforms a space — and we handle every detail with meticulous preparation, premium materials, and clean execution.",
+    listLabel: "Included",
     items: [
-      "Full interior painting (rooms, ceilings, trim, millwork)",
-      "Accent walls and specialty finishes",
+      "Full room interior painting (rooms, ceilings, trim, millwork)",
+      "Touch-ups, trim & millwork refinishing",
+      "Accent walls & specialty finishes",
+      "Premium materials, clean execution",
+      "Light cosmetic refresh — hardware, fixtures, minor repairs",
       "Touch-up programs for maintained residences",
-      "Light cosmetic refresh (hardware, fixtures, minor repairs)",
     ],
     who: "Owners preparing a residence for a new season, a sale, or simply a higher standard.",
   },
@@ -54,18 +54,18 @@ const services = [
     id: "stewardship",
     number: "03",
     title: "Private Home Services",
+    image: "/images/homeservices.webp",
     tagline:
       "For owners who want their home fully attended to — without the coordination.",
-    body: [
-      "The stewardship program is our most comprehensive offering. We become the single point of contact for your home’s ongoing care — managing cleaning schedules, coordinating refresh work, monitoring for issues, and ensuring your residence is always in the condition you expect.",
-      "Think of it as a home manager you never have to think about hiring.",
-    ],
-    listLabel: "Includes",
+    body: "For owners who want their residence fully attended to — without the overhead of managing it themselves. We coordinate the details, maintain the standard, and ensure your home is always in the condition you expect.",
+    listLabel: "Included",
     items: [
-      "Priority access to all Beacon Hill Interiors services",
-      "Ongoing coordination and scheduling",
-      "Seasonal inspection and refresh planning",
-      "Preferred response times and availability",
+      "Vendor coordination & scheduling",
+      "Access management & building protocols",
+      "Ongoing cleaning coordination & scheduling",
+      "Seasonal readiness & property oversight",
+      "Punch list support & light maintenance",
+      "Seasonal inspection & refresh planning",
     ],
     who: "Owners of primary residences, pied-à-terres, or investment properties who want a trusted partner managing the details.",
   },
@@ -82,7 +82,7 @@ export default function ServicesPage() {
             className="text-[32px] md:text-[42px] uppercase tracking-[0.06em] leading-[1.2] max-w-2xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            Three services. One standard. Your home — kept exactly as it should be.
+            Three services. One standard.
           </h1>
         </div>
       </section>
@@ -105,17 +105,24 @@ export default function ServicesPage() {
         <div key={service.id}>
           <section
             id={service.id}
-            className="bg-bhi-white py-24 md:py-32 scroll-mt-[130px]"
+            className="bg-bhi-white scroll-mt-[130px]"
           >
-            <div className="max-w-6xl mx-auto px-8">
+            {/* Service image — full width, 320px */}
+            <div className="relative w-full" style={{ height: "320px" }}>
+              <Image
+                src={service.image}
+                alt=""
+                fill
+                className="object-cover"
+              />
+            </div>
+
+            <div className="max-w-6xl mx-auto px-8 py-24 md:py-32">
               {/* Number + rule */}
               <div className="flex items-center gap-6 mb-10">
                 <span
                   className="text-xs uppercase tracking-[0.25em] shrink-0"
-                  style={{
-                    fontFamily: "var(--bhi-font-sans)",
-                    color: "var(--bhi-gold)",
-                  }}
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
                 >
                   {service.number}
                 </span>
@@ -141,29 +148,18 @@ export default function ServicesPage() {
               {/* Body + bullets */}
               <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 md:gap-20 mb-16">
                 {/* Body copy */}
-                <div className="flex flex-col gap-5">
-                  {service.body.map((para, i) => (
-                    <p
-                      key={i}
-                      className="text-[16px] leading-[1.85]"
-                      style={{
-                        fontFamily: "var(--bhi-font)",
-                        color: "var(--bhi-warm-gray)",
-                      }}
-                    >
-                      {para}
-                    </p>
-                  ))}
-                </div>
+                <p
+                  className="text-[17px] leading-[1.85]"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                >
+                  {service.body}
+                </p>
 
                 {/* Bullet list */}
                 <div>
                   <p
                     className="text-[10px] uppercase tracking-[0.2em] mb-5"
-                    style={{
-                      fontFamily: "var(--bhi-font-sans)",
-                      color: "var(--bhi-gold)",
-                    }}
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)" }}
                   >
                     {service.listLabel}
                   </p>
@@ -171,20 +167,14 @@ export default function ServicesPage() {
                     {service.items.map((item) => (
                       <li
                         key={item}
-                        className="flex items-start gap-3 text-[15px] leading-[1.7]"
-                        style={{
-                          fontFamily: "var(--bhi-font)",
-                          color: "var(--bhi-charcoal)",
-                        }}
+                        className="flex items-start gap-3 text-[16px] leading-[1.7]"
+                        style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
                       >
                         <span
-                          className="mt-[9px] shrink-0 block rounded-full"
-                          style={{
-                            width: "3px",
-                            height: "3px",
-                            backgroundColor: "var(--bhi-gold)",
-                          }}
-                        />
+                          className="shrink-0 mt-[0.15em]"
+                          style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "14px", lineHeight: 1.6 }}
+                          aria-hidden="true"
+                        >—</span>
                         {item}
                       </li>
                     ))}
@@ -193,25 +183,10 @@ export default function ServicesPage() {
               </div>
 
               {/* Who it's for */}
-              <div
-                className="pt-8"
-                style={{ borderTop: "0.5px solid var(--bhi-sand)" }}
-              >
-                <p
-                  className="text-[10px] uppercase tracking-[0.2em] mb-3"
-                  style={{
-                    fontFamily: "var(--bhi-font-sans)",
-                    color: "var(--bhi-gold)",
-                  }}
-                >
-                  Who it&rsquo;s for
-                </p>
+              <div className="pt-8" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
                 <p
                   className="text-[15px] leading-[1.75] italic max-w-2xl"
-                  style={{
-                    fontFamily: "var(--bhi-font)",
-                    color: "var(--bhi-warm-gray)",
-                  }}
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
                 >
                   {service.who}
                 </p>
