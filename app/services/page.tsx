@@ -173,7 +173,7 @@ export default function ServicesPage() {
               </div>
 
               {/* Who it's for */}
-              <div className="pt-8 mb-10" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
+              <div className="mb-10">
                 <p
                   className="text-[15px] leading-[1.75] italic max-w-2xl"
                   style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
@@ -200,15 +200,13 @@ export default function ServicesPage() {
               >
                 Inquire About Your Home
               </Link>
+
+              {/* Divider — last element, separates from next section */}
+              {index < services.length - 1 && (
+                <GoldRule className="mt-16" />
+              )}
             </div>
           </section>
-
-          {/* Gold divider between services — not after the last one */}
-          {index < services.length - 1 && (
-            <div className="max-w-6xl mx-auto px-8">
-              <GoldRule />
-            </div>
-          )}
         </div>
       ))}
 
