@@ -108,16 +108,13 @@ export default function ServicesPage() {
             </div>
 
             <div className="max-w-6xl mx-auto px-8 py-24 md:py-32">
-              {/* Number + rule */}
-              <div className="flex items-center gap-6 mb-10">
-                <span
-                  className="text-xs uppercase tracking-[0.25em] shrink-0"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
-                >
-                  {service.number}
-                </span>
-                <GoldRule className="flex-1" />
-              </div>
+              {/* Number */}
+              <p
+                className="text-xs uppercase tracking-[0.25em] mb-10"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+              >
+                {service.number}
+              </p>
 
               {/* Title */}
               <h2
