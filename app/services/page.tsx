@@ -92,119 +92,116 @@ export default function ServicesPage() {
 
       {/* ── SERVICE SECTIONS ─────────────────────────────────────────── */}
       {services.map((service, index) => (
-        <div key={service.id}>
-          <section
-            id={service.id}
-            className="bg-bhi-white scroll-mt-[130px]"
-          >
-            {/* Service image — full width, 320px */}
-            <div className="relative w-full" style={{ height: "320px" }}>
-              <Image
-                src={service.image}
-                alt=""
-                fill
-                className="object-cover"
+        <section
+          key={service.id}
+          id={service.id}
+          className="bg-bhi-white scroll-mt-[130px]"
+        >
+          {/* Image — full width, 280px */}
+          <div className="relative w-full" style={{ height: "280px" }}>
+            <Image src={service.image} alt="" fill className="object-cover" />
+          </div>
+
+          <div className="max-w-6xl mx-auto px-8 py-16 md:py-24">
+            {/* Number */}
+            <p
+              className="text-xs uppercase tracking-[0.25em] mb-5"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+            >
+              {service.number}
+            </p>
+
+            {/* Full-width gold rule */}
+            <GoldRule className="mb-8" />
+
+            {/* Title */}
+            <h2
+              className="text-[30px] md:text-[40px] lg:text-[46px] uppercase tracking-[0.05em] leading-[1.15] mb-5"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              {service.title}
+            </h2>
+
+            {/* Tagline */}
+            <p
+              className="text-[17px] md:text-[19px] leading-[1.7] italic"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              {service.tagline}
+            </p>
+
+            {/* Body */}
+            <p
+              className="text-[17px] leading-[1.85] mt-8"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)", maxWidth: "680px" }}
+            >
+              {service.body}
+            </p>
+
+            {/* INCLUDED label */}
+            <p
+              className="text-[10px] uppercase tracking-[0.2em] mt-12"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+            >
+              {service.listLabel}
+            </p>
+
+            {/* Bullets — 2-col grid, single col on mobile */}
+            <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3 mt-5">
+              {service.items.map((item) => (
+                <li
+                  key={item}
+                  className="flex items-start gap-3 text-[17px] leading-[1.7]"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                >
+                  <span
+                    className="shrink-0 mt-[0.15em]"
+                    style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "14px", lineHeight: 1.6 }}
+                    aria-hidden="true"
+                  >—</span>
+                  {item}
+                </li>
+              ))}
+            </ul>
+
+            {/* Who it's for */}
+            <div className="mt-10 pt-8" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
+              <p
+                className="text-[15px] leading-[1.75] italic"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              >
+                {service.who}
+              </p>
+            </div>
+
+            {/* CTA */}
+            <p
+              className="text-[14px] italic mt-8 mb-5"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              Every engagement begins with a personal site visit.
+            </p>
+            <Link
+              href="/contact"
+              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto"
+              style={{
+                fontFamily: "var(--bhi-font-sans)",
+                backgroundColor: "var(--bhi-charcoal)",
+                color: "var(--bhi-white)",
+              }}
+            >
+              Inquire About Your Home
+            </Link>
+
+            {/* Sand divider — last element, not after final section */}
+            {index < services.length - 1 && (
+              <hr
+                className="mt-16"
+                style={{ border: "none", borderTop: "0.5px solid var(--bhi-sand)", width: "100%" }}
               />
-            </div>
-
-            <div className="max-w-6xl mx-auto px-8 py-24 md:py-32">
-              {/* Number */}
-              <p
-                className="text-xs uppercase tracking-[0.25em] mb-10"
-                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
-              >
-                {service.number}
-              </p>
-
-              {/* Title */}
-              <h2
-                className="text-[30px] md:text-[40px] lg:text-[48px] uppercase tracking-[0.05em] leading-[1.15] mb-5"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-              >
-                {service.title}
-              </h2>
-
-              {/* Tagline */}
-              <p
-                className="text-[17px] md:text-[19px] leading-[1.7] mb-16 max-w-2xl italic"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                {service.tagline}
-              </p>
-
-              {/* Body + bullets */}
-              <div className="grid grid-cols-1 md:grid-cols-[3fr_2fr] gap-12 md:gap-20 mb-16">
-                {/* Body copy */}
-                <p
-                  className="text-[17px] leading-[1.85]"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                >
-                  {service.body}
-                </p>
-
-                {/* Bullet list */}
-                <div>
-                  <p
-                    className="text-[10px] uppercase tracking-[0.2em] mb-5"
-                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)" }}
-                  >
-                    {service.listLabel}
-                  </p>
-                  <ul className="flex flex-col gap-3">
-                    {service.items.map((item) => (
-                      <li
-                        key={item}
-                        className="flex items-start gap-3 text-[16px] leading-[1.7]"
-                        style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                      >
-                        <span
-                          className="shrink-0 mt-[0.15em]"
-                          style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "14px", lineHeight: 1.6 }}
-                          aria-hidden="true"
-                        >—</span>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Who it's for */}
-              <div className="mb-10">
-                <p
-                  className="text-[15px] leading-[1.75] italic max-w-2xl"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                >
-                  {service.who}
-                </p>
-              </div>
-
-              {/* CTA */}
-              <p
-                className="text-[14px] italic mb-5"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                Every engagement begins with a personal site visit.
-              </p>
-              <Link
-                href="/contact"
-                className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto text-center"
-                style={{
-                  fontFamily: "var(--bhi-font-sans)",
-                  backgroundColor: "var(--bhi-charcoal)",
-                  color: "var(--bhi-white)",
-                }}
-              >
-                Inquire About Your Home
-              </Link>
-
-              {/* Divider — last element, separates from next section */}
-              {index < services.length - 1 && (
-                <GoldRule className="mt-16" />
-              )}
-            </div>
-          </section>
-        </div>
+            )}
+          </div>
+        </section>
       ))}
 
       {/* ── SCOPE SECTION ────────────────────────────────────────────── */}
