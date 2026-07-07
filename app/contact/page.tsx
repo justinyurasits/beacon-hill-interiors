@@ -44,7 +44,7 @@ export default function ContactPage() {
             className="text-[32px] md:text-[42px] uppercase tracking-[0.06em] leading-[1.2] max-w-2xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            Taking on a limited number of new clients.
+            Inquire About Availability
           </h1>
         </div>
       </section>
@@ -64,16 +64,18 @@ export default function ContactPage() {
                 className="text-[16px] leading-[1.85] mb-6"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                Every client relationship at Beacon Hill Interiors begins with a
-                conversation. We want to understand your home, your expectations,
-                and what a genuinely well-maintained residence means to you.
+                Beacon Hill Interiors accepts new client relationships selectively.
+                We work with homeowners whose residences require a consistent,
+                professional standard of care — and who want that handled without
+                their involvement.
               </p>
               <p
                 className="text-[16px] leading-[1.85] mb-8"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                Fill out the form and we&rsquo;ll be in touch within one business day
-                to schedule a brief introductory call.
+                To explore whether Beacon Hill Interiors is the right fit for your
+                home, please complete the form below. Every inquiry is reviewed
+                personally and we respond within one business day.
               </p>
               <a
                 href="tel:+17812278472"
@@ -87,10 +89,10 @@ export default function ContactPage() {
               <div className="mb-10">
                 <GoldRule className="mb-6" />
                 <p
-                  className="text-[16px] leading-[1.8] mb-4"
+                  className="text-[16px] leading-[1.8] mb-4 italic"
                   style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
                 >
-                  Before we enter your home, the details are handled.
+                  The details are handled before we arrive.
                 </p>
                 <p
                   className="text-[15px] leading-[1.75] italic"
@@ -106,8 +108,7 @@ export default function ContactPage() {
                 className="text-[14px] leading-[1.75] italic"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                We are selective about new client relationships and may not be the
-                right fit for every home. We will always let you know promptly.
+                Every inquiry is reviewed personally by Justin Yurasits.
               </p>
             </div>
 
@@ -247,7 +248,7 @@ export default function ContactPage() {
                         cursor: state.submitting ? "wait" : "pointer",
                       }}
                     >
-                      {state.submitting ? "Sending…" : "Submit Inquiry"}
+                      {state.submitting ? "Sending…" : "Inquire About Availability"}
                     </button>
                   </div>
 

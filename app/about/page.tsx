@@ -248,7 +248,7 @@ export default function AboutPage() {
                 color: "var(--bhi-white)",
               }}
             >
-              Inquire About Your Home
+              Inquire About Availability
             </Link>
           </div>
         </div>
