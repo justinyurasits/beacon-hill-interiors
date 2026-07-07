@@ -78,9 +78,9 @@ export default function AboutPage() {
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            We provide premium interior care, cleaning, painting, concierge home
-            services, and selective interior construction — all under one trusted,
-            highly accountable brand.
+            We provide premium interior care, cleaning, painting, and private home
+            services for clients who value discretion, cleanliness, and calm
+            execution.
           </p>
           <p
             className="text-[16px] leading-[1.95]"
@@ -122,10 +122,10 @@ export default function AboutPage() {
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            From recurring cleaning and interior painting to punch list work, vendor
-            coordination, seasonal refreshes, and selective remodels, our role is to
-            bring calm, disciplined execution to the details that make a home feel
-            truly cared for.
+            From recurring cleaning and interior painting to vendor coordination,
+            seasonal refreshes, and private home services, our role is to bring
+            calm, disciplined execution to the details that make a home feel truly
+            cared for.
           </p>
           <p
             className="text-[16px] leading-[1.95]"
@@ -224,20 +224,21 @@ export default function AboutPage() {
       >
         <div className="max-w-6xl mx-auto px-8">
           <div className="max-w-2xl">
-            <SectionLabel className="mb-6">Get In Touch</SectionLabel>
+            <SectionLabel className="mb-6">Inquire About Availability</SectionLabel>
             <h2
               className="text-[28px] md:text-[40px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
               style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
             >
-              Taking on a limited number of new clients.
+              Inquire About Availability
             </h2>
             <GoldRule className="mb-8" />
             <p
               className="text-[16px] leading-[1.8] mb-10"
               style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
             >
-              If you&rsquo;re looking for a home services partner who will hold your
-              residence to a genuinely high standard, we&rsquo;d like to hear from you.
+              Beacon Hill Interiors accepts new client relationships selectively.
+              To explore whether we might be a good fit for your home, please
+              complete the form below.
             </p>
             <Link
               href="/contact"

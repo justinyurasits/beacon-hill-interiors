@@ -1,8 +1,15 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/components/Logo";
 import GoldRule from "@/components/GoldRule";
 import SectionLabel from "@/components/SectionLabel";
+
+export const metadata: Metadata = {
+  title: "Beacon Hill Interiors — Private Home Services Boston",
+  description:
+    "Private home services for Boston's refined residences — cleaning, painting, refresh work, and home coordination through one trusted point of accountability.",
+};
 
 export default function Home() {
   return (
@@ -480,7 +487,7 @@ export default function Home() {
         <div className="relative z-10 w-full py-24 md:py-32 px-8 md:px-16">
           <div className="max-w-2xl">
             <SectionLabel className="mb-6" style={{ color: "var(--bhi-white)" }}>
-              Get In Touch
+              Inquire About Availability
             </SectionLabel>
             <h2
               className="text-[28px] md:text-[40px] uppercase tracking-[0.06em] leading-[1.2] mb-8"

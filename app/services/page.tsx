@@ -98,7 +98,7 @@ export default function ServicesPage() {
           className="bg-bhi-white scroll-mt-[130px]"
         >
           {/* Image — full width, 280px */}
-          <div className="relative w-full" style={{ height: "280px" }}>
+          <div className="relative w-full" style={{ height: "320px" }}>
             <Image src={service.image} alt="" fill className="object-cover" />
           </div>
 
@@ -190,7 +190,7 @@ export default function ServicesPage() {
                 color: "var(--bhi-white)",
               }}
             >
-              Inquire About Your Home
+              Inquire About Availability
             </Link>
 
             {/* Sand divider — last element, not after final section */}
@@ -293,20 +293,21 @@ export default function ServicesPage() {
       >
         <div className="max-w-6xl mx-auto px-8">
           <div className="max-w-2xl">
-            <SectionLabel className="mb-6">Get In Touch</SectionLabel>
+            <SectionLabel className="mb-6">Inquire About Availability</SectionLabel>
             <h2
               className="text-[28px] md:text-[40px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
               style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
             >
-              Taking on a limited number of new clients.
+              Inquire About Availability
             </h2>
             <GoldRule className="mb-8" />
             <p
               className="text-[16px] leading-[1.8] mb-10"
               style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
             >
-              If you&rsquo;re looking for a home services partner who will hold your
-              residence to a genuinely high standard, we&rsquo;d like to hear from you.
+              Beacon Hill Interiors accepts new client relationships selectively.
+              To explore whether we might be a good fit for your home, please
+              complete the form below.
             </p>
             <Link
               href="/contact"
@@ -317,7 +318,7 @@ export default function ServicesPage() {
                 color: "var(--bhi-white)",
               }}
             >
-              Inquire About Your Home
+              Inquire About Availability
             </Link>
           </div>
         </div>
