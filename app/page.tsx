@@ -23,20 +23,27 @@ export default function Home() {
         <div className="relative max-w-6xl mx-auto px-8 py-24 md:py-32 flex flex-col items-center text-center w-full">
           <Logo height={48} className="text-bhi-white mb-10" style={{ filter: "drop-shadow(0 1px 4px rgba(0,0,0,0.4))" }} />
 
+          <p
+            className="text-[11px] uppercase tracking-[0.2em] mb-6"
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "rgba(255,255,255,0.85)", textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
+          >
+            Private Home Services &middot; Boston
+          </p>
+
           <h1
             className="text-[42px] md:text-[56px] lg:text-[64px] uppercase tracking-[0.06em] leading-[1.1] mb-8 max-w-3xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
-            Confidence Without Supervision.
+            For Homes Requiring the Highest Standard.
           </h1>
 
           <p
             className="text-[18px] leading-[1.8] mb-10"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.9)", maxWidth: "640px", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
-            Private home services for Boston&rsquo;s refined residences — cleaning,
-            painting, refresh work, and home coordination through one trusted
-            point of accountability.
+            Beacon Hill Interiors provides premium interior care, cleaning,
+            painting, and private home services for Boston homeowners who require
+            discretion, consistency, and the highest quality.
           </p>
 
           <Link
@@ -51,7 +58,7 @@ export default function Home() {
             className="text-[14px] italic mt-5"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)", textShadow: "0 1px 3px rgba(0,0,0,0.5)" }}
           >
-            Every engagement begins with a private consultation.
+            Confidence Without Supervision.
           </p>
         </div>
       </section>
@@ -436,7 +443,7 @@ export default function Home() {
             className="text-[28px] md:text-[36px] leading-[1.25] mb-8 max-w-2xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            The details are handled before we arrive.
+            The details are handled before we start.
           </h2>
           <GoldRule className="mb-8 max-w-xs" />
           <p
@@ -484,8 +491,8 @@ export default function Home() {
       <section className="relative flex items-center" style={{ minHeight: "280px" }}>
         <Image src="/images/hero.webp" alt="" fill className="object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.60)" }} />
-        <div className="relative z-10 w-full py-24 md:py-32 px-8 md:px-16">
-          <div className="max-w-2xl">
+        <div className="relative z-10 w-full py-24 md:py-32 px-8 md:px-16 flex flex-col items-center text-center">
+          <div className="max-w-2xl w-full flex flex-col items-center">
             <SectionLabel className="mb-6" style={{ color: "var(--bhi-white)" }}>
               Inquire About Availability
             </SectionLabel>
@@ -495,7 +502,7 @@ export default function Home() {
             >
               Inquire About Availability
             </h2>
-            <GoldRule className="mb-8" />
+            <GoldRule className="mb-8 w-full" />
             <p
               className="text-[16px] leading-[1.8] mb-10"
               style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.85)", maxWidth: "560px" }}
@@ -506,7 +513,7 @@ export default function Home() {
             </p>
             <Link
               href="/contact"
-              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto text-center md:text-left"
+              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
               style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
             >
               Inquire About Availability
