@@ -104,10 +104,28 @@ export default function AboutPage() {
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            That construction background shapes the way we approach every service. We
-            understand finishes, materials, access requirements, building protocols,
-            protection, scheduling, and the importance of leaving a home better than
-            we found it.
+            Justin has delivered luxury interior renovations at some of Boston&rsquo;s
+            most distinguished residential addresses — including One Dalton Street,
+            100 Sudbury, The Intercontinental Boston, The Clarendon, and historic
+            brownstones along Beacon Street and Commonwealth Avenue in Beacon Hill
+            and Back Bay.
+          </p>
+          <p
+            className="text-[16px] leading-[1.95]"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            That work built a deep understanding of what these buildings require:
+            the management protocols, the standards of fit and finish, the service
+            entrance requirements, and the level of care their residents expect.
+          </p>
+          <p
+            className="text-[16px] leading-[1.95]"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            BHI didn&rsquo;t learn to work in Boston&rsquo;s finest buildings. It was built
+            there. That background shapes everything about how we operate: the
+            standard we hold our work to, the way we move through managed
+            buildings, and the professional eye we bring to every home we care for.
           </p>
           <p
             className="text-[16px] leading-[1.95]"
