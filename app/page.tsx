@@ -303,6 +303,73 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── WHO WE WORK WITH ─────────────────────────────────────────── */}
+      <section className="bg-bhi-white py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="flex flex-col items-center text-center mb-16">
+            <SectionLabel className="mb-6">Who We Work With</SectionLabel>
+            <h2
+              className="text-[28px] md:text-[36px] leading-[1.25] mb-6 max-w-2xl"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              For homeowners and the professionals who serve them.
+            </h2>
+            <p
+              className="text-[17px] leading-[1.85]"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)", maxWidth: "640px" }}
+            >
+              Beacon Hill Interiors serves discerning homeowners directly and works
+              closely with the trusted professionals who care for Boston&rsquo;s finest
+              properties.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+            {[
+              {
+                title: "Homeowners",
+                body: "For interior care, cleaning, painting, refresh work, and ongoing home support through one trusted point of accountability.",
+              },
+              {
+                title: "Realtors & Sellers",
+                body: "For pre-sale refresh, buyer move-in readiness, and listing preparation — before photos, staging, or closing.",
+              },
+              {
+                title: "Interior Designers",
+                body: "Discreet post-install support, final detailing, touch-ups, punch list completion, vendor coordination, and ongoing care that helps preserve the finished space.",
+              },
+              {
+                title: "Contractors & Builders",
+                body: "Closeout and turnover support for high-finish interiors — final cleaning, paint touch-ups, punch list help, detailing, and move-in readiness before handoff.",
+              },
+            ].map((col) => (
+              <div
+                key={col.title}
+                style={{
+                  border: "0.5px solid var(--bhi-sand)",
+                  backgroundColor: "var(--bhi-white)",
+                  padding: "32px 28px",
+                }}
+              >
+                <GoldRule className="mb-6" />
+                <p
+                  className="text-[11px] uppercase tracking-[0.2em] mb-4 font-semibold"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
+                >
+                  {col.title}
+                </p>
+                <p
+                  className="text-[15px] leading-[1.8]"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                >
+                  {col.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* ── REFERRAL PARTNERS ────────────────────────────────────────── */}
       <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
         <div className="max-w-6xl mx-auto px-8">
