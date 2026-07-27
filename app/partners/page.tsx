@@ -6,7 +6,7 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "Partners — Beacon Hill Interiors",
   description:
-    "Beacon Hill Interiors works with interior designers, contractors, and builders who need clean, discreet, detail-driven support before handoff and after installation.",
+    "Beacon Hill Interiors works with realtors, designers, contractors, and builders who need clean, discreet, detail-driven support before listing, handoff, or move-in.",
 };
 
 export default function PartnersPage() {
@@ -17,29 +17,124 @@ export default function PartnersPage() {
         <div className="max-w-6xl mx-auto px-8 pt-16">
           <SectionLabel className="mb-6">Partners</SectionLabel>
           <h1
-            className="text-[32px] md:text-[42px] uppercase tracking-[0.06em] leading-[1.2] max-w-2xl mb-6"
+            className="text-[32px] md:text-[42px] uppercase tracking-[0.06em] leading-[1.2] max-w-3xl mb-6"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            For Designers, Contractors &amp; Builders
+            For Realtors, Designers, Contractors &amp; Builders
           </h1>
           <GoldRule className="max-w-xs" />
           <p
             className="text-[17px] leading-[1.85] mt-8 max-w-2xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            Beacon Hill Interiors works with trusted professionals who need clean,
-            discreet, detail-driven support before handoff and after installation.
+            Beacon Hill Interiors works with trusted referral and trade partners who
+            need clean, discreet, detail-driven support before listing, staging,
+            closing, installation, handoff, or move-in.
           </p>
         </div>
       </section>
 
-      {/* ── FOR INTERIOR DESIGNERS ───────────────────────────────────── */}
+      {/* ── 01 FOR REALTORS & LISTING AGENTS ─────────────────────────── */}
       <section
         className="py-24 md:py-32"
         style={{ backgroundColor: "var(--bhi-linen)" }}
       >
         <div className="max-w-6xl mx-auto px-8">
           <div className="max-w-3xl">
+            <p
+              className="text-[10px] uppercase tracking-[0.25em] mb-6"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+            >
+              01
+            </p>
+            <SectionLabel className="mb-6">For Realtors &amp; Listing Agents</SectionLabel>
+            <h2
+              className="text-[28px] md:text-[38px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              Pre-sale refresh and move-in readiness.
+            </h2>
+            <GoldRule className="mb-8" />
+            <p
+              className="text-[17px] leading-[1.85] mb-12"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              Beacon Hill Interiors helps agents, sellers, and buyers prepare homes
+              before photos, staging, listing launch, closing, or move-in. We handle
+              the cleaning, painting, touch-ups, punch list items, vendor coordination,
+              and final prep that make a property feel clean, finished, and ready —
+              without the agent or client managing multiple vendors.
+            </p>
+
+            <div
+              className="mb-12"
+              style={{ borderTop: "0.5px solid var(--bhi-sand)", paddingTop: "32px" }}
+            >
+              <p
+                className="text-[10px] uppercase tracking-[0.2em] mb-5"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+              >
+                Best For
+              </p>
+              <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+                {[
+                  "Pre-sale refresh before photos or staging",
+                  "Listing preparation before launch",
+                  "Open house readiness",
+                  "Buyer move-in reset after closing",
+                  "Paint touch-ups and minor interior repairs",
+                  "Punch list completion",
+                  "Final detailing before handoff",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="flex items-start gap-3 text-[16px] leading-[1.7]"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                  >
+                    <span
+                      className="shrink-0 mt-[0.15em]"
+                      style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "14px", lineHeight: 1.6 }}
+                      aria-hidden="true"
+                    >—</span>
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <p
+              className="text-[17px] italic leading-[1.65] mb-10"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              We help homes feel clean, finished, and ready when timing and
+              presentation matter.
+            </p>
+
+            <Link
+              href="/contact"
+              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
+              style={{
+                fontFamily: "var(--bhi-font-sans)",
+                backgroundColor: "var(--bhi-charcoal)",
+                color: "var(--bhi-white)",
+              }}
+            >
+              Inquire About Availability
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ── 02 FOR INTERIOR DESIGNERS ────────────────────────────────── */}
+      <section className="bg-bhi-white py-24 md:py-32">
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="max-w-3xl">
+            <p
+              className="text-[10px] uppercase tracking-[0.25em] mb-6"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+            >
+              02
+            </p>
             <SectionLabel className="mb-6">For Interior Designers</SectionLabel>
             <h2
               className="text-[28px] md:text-[38px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
@@ -112,10 +207,19 @@ export default function PartnersPage() {
         </div>
       </section>
 
-      {/* ── FOR CONTRACTORS & BUILDERS ───────────────────────────────── */}
-      <section className="bg-bhi-white py-24 md:py-32">
+      {/* ── 03 FOR CONTRACTORS & BUILDERS ────────────────────────────── */}
+      <section
+        className="py-24 md:py-32"
+        style={{ backgroundColor: "var(--bhi-linen)" }}
+      >
         <div className="max-w-6xl mx-auto px-8">
           <div className="max-w-3xl">
+            <p
+              className="text-[10px] uppercase tracking-[0.25em] mb-6"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+            >
+              03
+            </p>
             <SectionLabel className="mb-6">For Contractors &amp; Builders</SectionLabel>
             <h2
               className="text-[28px] md:text-[38px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
@@ -190,10 +294,7 @@ export default function PartnersPage() {
       </section>
 
       {/* ── CONTACT CTA ──────────────────────────────────────────────── */}
-      <section
-        className="py-24 md:py-32"
-        style={{ backgroundColor: "var(--bhi-linen)" }}
-      >
+      <section className="bg-bhi-white py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-8">
           <div className="max-w-2xl">
             <SectionLabel className="mb-6">Work With Us</SectionLabel>
