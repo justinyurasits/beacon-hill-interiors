@@ -179,10 +179,15 @@ export default function ContactPage() {
                       style={{ ...inputBase, cursor: "pointer", paddingRight: "24px" }}
                     >
                       <option value="" disabled style={{ color: "var(--bhi-warm-gray)" }}>Select a service</option>
-                      <option value="Interior Care & Cleaning">Interior Care &amp; Cleaning</option>
+                      <option value="Recurring Interior Care & Cleaning">Recurring Interior Care &amp; Cleaning</option>
+                      <option value="Deep Cleaning / Initial Reset">Deep Cleaning / Initial Reset</option>
+                      <option value="Move-In / Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
                       <option value="Interior Painting & Refresh">Interior Painting &amp; Refresh</option>
                       <option value="Private Home Services">Private Home Services</option>
-                      <option value="Not Sure Yet">Not Sure Yet</option>
+                      <option value="Pre-Sale Refresh / Move-In Readiness">Pre-Sale Refresh / Move-In Readiness</option>
+                      <option value="Punch List / Closeout Support">Punch List / Closeout Support</option>
+                      <option value="Selective Interior Improvements">Selective Interior Improvements</option>
+                      <option value="Other / Not Sure">Other / Not Sure</option>
                     </select>
                     <ValidationError field="service" prefix="Service" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />
                   </div>

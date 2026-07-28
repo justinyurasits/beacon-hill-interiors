@@ -63,6 +63,34 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── NOW ACCEPTING BAND ───────────────────────────────────────── */}
+      <section style={{ backgroundColor: "#F5F2EE" }}>
+        <GoldRule />
+        <div className="py-8 px-8 flex flex-col items-center text-center gap-4">
+          <p
+            className="text-[10px] uppercase tracking-[0.25em]"
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+          >
+            Now Accepting
+          </p>
+          <p
+            className="text-[17px] italic leading-[1.75]"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)", maxWidth: "640px" }}
+          >
+            Beacon Hill Interiors is now accepting select recurring Interior Care
+            &amp; Cleaning clients in Boston, Cambridge, Brookline, Newton,
+            Somerville, Medford, Wellesley, and the inner suburbs.
+          </p>
+          <p
+            className="text-[10px] uppercase tracking-[0.25em]"
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+          >
+            Weekly &middot; Biweekly &middot; Deep Cleaning &middot; Seasonal Resets
+          </p>
+        </div>
+        <GoldRule />
+      </section>
+
       {/* ── SERVICES ─────────────────────────────────────────────────── */}
       <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
         <div className="max-w-6xl mx-auto px-8">
@@ -86,14 +114,14 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                href: "/services#interior-care",
+                href: "/cleaning",
                 name: "Interior Care & Cleaning",
                 image: "/images/cleaning.webp",
                 bullets: [
-                  "Recurring weekly or biweekly cleaning",
-                  "Deep cleaning & seasonal resets",
-                  "Move-in / Move-out preparation",
-                  "Post-construction cleaning",
+                  "Weekly and biweekly recurring cleaning",
+                  "Deep cleaning and initial home reset",
+                  "A consistent team, the same standard, every visit",
+                  "Condos, brownstones, and managed buildings welcome",
                 ],
               },
               {

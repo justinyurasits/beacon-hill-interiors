@@ -4,8 +4,18 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Logo from "./Logo";
 
-const navLinks = [
-  { href: "/services", label: "Services" },
+type SubLink = { href: string; label: string };
+type NavLink = { href: string; label: string; children?: SubLink[] };
+
+const navLinks: NavLink[] = [
+  {
+    href: "/services",
+    label: "Services",
+    children: [
+      { href: "/services", label: "All Services" },
+      { href: "/cleaning", label: "Cleaning" },
+    ],
+  },
   { href: "/about", label: "About" },
   { href: "/partners", label: "Partners" },
   { href: "/contact", label: "Contact" },
@@ -57,16 +67,52 @@ export default function Nav() {
 
         {/* Desktop nav */}
         <nav className="hidden md:flex items-center gap-8" aria-label="Primary navigation">
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className="text-[10px] uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((link) =>
+            link.children ? (
+              <div key={link.href} className="relative group">
+                <Link
+                  href={link.href}
+                  className="text-[10px] uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+                >
+                  {link.label}
+                </Link>
+                <div
+                  className="absolute top-full left-0 pt-3 hidden group-hover:block"
+                  style={{ zIndex: 60 }}
+                >
+                  <div
+                    className="flex flex-col py-2"
+                    style={{
+                      minWidth: "160px",
+                      backgroundColor: "var(--bhi-white)",
+                      border: "0.5px solid var(--bhi-sand)",
+                    }}
+                  >
+                    {link.children.map((sub) => (
+                      <Link
+                        key={sub.href}
+                        href={sub.href}
+                        className="block px-5 py-2.5 text-[10px] uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
+                        style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+                      >
+                        {sub.label}
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <Link
+                key={link.href}
+                href={link.href}
+                className="text-[10px] uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+              >
+                {link.label}
+              </Link>
+            )
+          )}
           <Link
             href="/contact"
             className="text-[10px] uppercase tracking-[0.2em] px-5 py-2.5 transition-opacity hover:opacity-80"
@@ -127,15 +173,33 @@ export default function Nav() {
             aria-label="Mobile navigation"
           >
             {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
-                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
-                onClick={() => setMenuOpen(false)}
-              >
-                {link.label}
-              </Link>
+              <div key={link.href}>
+                <Link
+                  href={link.href}
+                  className="text-xs uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  {link.label}
+                </Link>
+                {link.children && (
+                  <div className="flex flex-col gap-3 mt-3 pl-4">
+                    {link.children
+                      .filter((sub) => sub.href !== link.href)
+                      .map((sub) => (
+                        <Link
+                          key={sub.href}
+                          href={sub.href}
+                          className="text-xs uppercase tracking-[0.2em] transition-opacity hover:opacity-60"
+                          style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                          onClick={() => setMenuOpen(false)}
+                        >
+                          {sub.label}
+                        </Link>
+                      ))}
+                  </div>
+                )}
+              </div>
             ))}
             <Link
               href="/contact"

@@ -18,18 +18,29 @@ const services = [
     title: "Interior Care & Cleaning",
     image: "/images/cleaning.webp",
     tagline:
-      "Premium recurring cleaning for residences that require more than the ordinary.",
-    body: "Your home reflects who you are. We treat it accordingly — with a private, recurring cleaning program built around your schedule, your preferences, and the specific needs of your residence.",
+      "A clean home should feel calm, cared for, and consistently maintained — without you having to manage the details.",
+    body: "Beacon Hill Interiors provides premium recurring cleaning for Boston-area residences, with a focus on discretion, consistency, protected finishes, and clear communication. We are built for clients who want the same standard every visit — not a rotating, transactional cleaning service.",
     listLabel: "Included",
     items: [
-      "Recurring weekly or biweekly cleaning to a white-glove standard",
-      "Deep cleaning & seasonal resets",
-      "Attention to detail in kitchens, bathrooms, and living areas",
-      "Move-in / move-out preparation",
-      "Post-construction cleaning",
-      "Discreet scheduling built around your household",
+      "Weekly and biweekly recurring cleaning",
+      "Initial deep cleaning and home reset",
+      "Kitchen and bathroom detailing",
+      "Dusting, floors, trim, surfaces, and fixtures",
+      "Careful handling of finishes, materials, and furnishings",
+      "Seasonal resets",
+      "Move-in / move-out cleaning",
+      "Post-construction cleaning when needed",
     ],
-    who: "Busy professionals and owners of Boston condominiums who expect their home maintained to an exceptional standard without having to think about it.",
+    bestFor: [
+      "Busy professionals and homeowners",
+      "Condos, townhomes, brownstones, and managed buildings",
+      "Clients who value privacy, trust, and consistency",
+      "Second-home and pied-à-terre owners",
+      "Homes that require careful handling of premium finishes",
+    ],
+    standardLine: "Consistent. Discreet. Detail-oriented. Professionally managed.",
+    ctaText: "Inquire About Recurring Interior Care",
+    who: "",
   },
   {
     id: "interior-refresh",
@@ -164,33 +175,75 @@ export default function ServicesPage() {
               ))}
             </ul>
 
-            {/* Who it's for */}
-            <div className="mt-10 pt-8" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
-              <p
-                className="text-[15px] leading-[1.75] italic"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                {service.who}
-              </p>
-            </div>
+            {/* Who it's for OR Best For callout */}
+            {service.bestFor ? (
+              <>
+                <div
+                  className="mt-10 p-8 md:p-10"
+                  style={{ backgroundColor: "var(--bhi-linen)", border: "0.5px solid var(--bhi-sand)" }}
+                >
+                  <p
+                    className="text-[10px] uppercase tracking-[0.2em] mb-5"
+                    style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                  >
+                    Best For
+                  </p>
+                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-3">
+                    {service.bestFor.map((item) => (
+                      <li
+                        key={item}
+                        className="flex items-start gap-3 text-[16px] leading-[1.7]"
+                        style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                      >
+                        <span
+                          className="shrink-0 mt-[0.15em]"
+                          style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "14px", lineHeight: 1.6 }}
+                          aria-hidden="true"
+                        >—</span>
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {service.standardLine && (
+                  <p
+                    className="text-[15px] italic text-center mt-8"
+                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)" }}
+                  >
+                    {service.standardLine}
+                  </p>
+                )}
+              </>
+            ) : (
+              <div className="mt-10 pt-8" style={{ borderTop: "0.5px solid var(--bhi-sand)" }}>
+                <p
+                  className="text-[15px] leading-[1.75] italic"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                >
+                  {service.who}
+                </p>
+              </div>
+            )}
 
             {/* CTA */}
-            <p
-              className="text-[14px] italic mt-8 mb-5"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-            >
-              Every engagement begins with a personal site visit.
-            </p>
+            {!service.ctaText && (
+              <p
+                className="text-[14px] italic mt-8 mb-5"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              >
+                Every engagement begins with a personal site visit.
+              </p>
+            )}
             <Link
               href="/contact"
-              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto"
+              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 w-full md:w-auto mt-8"
               style={{
                 fontFamily: "var(--bhi-font-sans)",
                 backgroundColor: "var(--bhi-charcoal)",
                 color: "var(--bhi-white)",
               }}
             >
-              Inquire About Availability
+              {service.ctaText ?? "Inquire About Availability"}
             </Link>
 
             {/* Sand divider — last element, not after final section */}
