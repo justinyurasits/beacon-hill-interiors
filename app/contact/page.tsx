@@ -1,269 +1,260 @@
-"use client";
+'use client'
 
-import { useForm, ValidationError } from "@formspree/react";
-import GoldRule from "@/components/GoldRule";
-import SectionLabel from "@/components/SectionLabel";
-
-const inputBase: React.CSSProperties = {
-  width: "100%",
-  backgroundColor: "transparent",
-  borderTop: "none",
-  borderLeft: "none",
-  borderRight: "none",
-  borderBottom: "0.5px solid var(--bhi-sand)",
-  borderRadius: 0,
-  padding: "10px 0",
-  fontFamily: "var(--bhi-font)",
-  fontSize: "16px",
-  color: "var(--bhi-charcoal)",
-  outline: "none",
-  appearance: "none",
-};
-
-const labelBase: React.CSSProperties = {
-  display: "block",
-  fontFamily: "var(--bhi-font-sans)",
-  fontSize: "10px",
-  textTransform: "uppercase",
-  letterSpacing: "0.2em",
-  color: "var(--bhi-warm-gray)",
-  marginBottom: "8px",
-};
-
+import { useState } from 'react'
 
 export default function ContactPage() {
-  const [state, handleSubmit] = useForm("xdarwyzd");
+  const [status, setStatus] = useState<'idle' | 'submitting' | 'success' | 'error'>('idle')
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault()
+    setStatus('submitting')
+
+    const form = e.currentTarget
+    const data = new FormData(form)
+
+    try {
+      const res = await fetch('https://formspree.io/f/xdarwyzd', {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      })
+
+      if (res.ok) {
+        setStatus('success')
+        form.reset()
+      } else {
+        setStatus('error')
+      }
+    } catch {
+      setStatus('error')
+    }
+  }
 
   return (
-    <>
-      {/* ── PAGE HEADER ──────────────────────────────────────────────── */}
-      <section className="bg-bhi-white pt-[72px] pb-16">
-        <div className="max-w-6xl mx-auto px-8 pt-16">
-          <SectionLabel className="mb-6">Get In Touch</SectionLabel>
-          <h1
-            className="text-[32px] md:text-[42px] uppercase tracking-[0.06em] leading-[1.2] max-w-2xl"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-          >
+    <main className="bg-[#F5F2EE] min-h-screen">
+
+      {/* ── Page Header ─────────────────────────────────────────── */}
+      <section className="bg-[#2C2C2C] px-6 py-20 md:py-28">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="text-[#B8956A] text-xs tracking-[0.25em] uppercase mb-4 font-light">
+            Beacon Hill Interiors
+          </p>
+          <h1 className="text-white font-serif text-4xl md:text-5xl font-light leading-tight mb-6">
             Inquire About Availability
           </h1>
+          <p className="text-[#C9C0B5] text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
+            We maintain a limited recurring client list to preserve consistency,
+            quality, and accountability. Reach out to begin the conversation.
+          </p>
         </div>
       </section>
 
-      {/* ── FORM SECTION ─────────────────────────────────────────────── */}
-      <section
-        className="py-20 md:py-28"
-        style={{ backgroundColor: "var(--bhi-linen)" }}
-      >
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 md:gap-24 items-start">
+      {/* ── Form Section ─────────────────────────────────────────── */}
+      <section className="px-6 py-16 md:py-24">
+        <div className="max-w-2xl mx-auto">
 
-            {/* Left: copy + credentials */}
-            <div>
-              <GoldRule className="mb-8" />
-              <p
-                className="text-[16px] leading-[1.85] mb-6"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                Beacon Hill Interiors accepts new client relationships selectively.
-                We work with homeowners whose residences require a consistent,
-                professional standard of care — and who want that handled without
-                their involvement.
+          {/* Success state */}
+          {status === 'success' ? (
+            <div className="text-center py-16">
+              <div className="w-12 h-px bg-[#B8956A] mx-auto mb-8" />
+              <h2 className="font-serif text-[#2C2C2C] text-2xl font-light mb-4">
+                Thank you for reaching out.
+              </h2>
+              <p className="text-[#2C2C2C] text-base font-light leading-relaxed max-w-md mx-auto">
+                We have received your inquiry and will be in touch shortly.
               </p>
-              <p
-                className="text-[16px] leading-[1.85] mb-8"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                To explore whether Beacon Hill Interiors is the right fit for your
-                home, please complete the form below. Every inquiry is reviewed
-                personally and we respond within one business day.
-              </p>
-              <a
-                href="tel:+17812278472"
-                className="inline-block text-[15px] mb-12 transition-opacity hover:opacity-70"
-                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
-              >
-                (781) 227-8472
-              </a>
+              <div className="w-12 h-px bg-[#B8956A] mx-auto mt-8" />
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-6">
 
-              {/* Credentials */}
-              <div className="mb-10">
-                <GoldRule className="mb-6" />
-                <p
-                  className="text-[16px] leading-[1.8] mb-4 italic"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+              {/* Name */}
+              <div>
+                <label
+                  htmlFor="name"
+                  className="block text-xs tracking-[0.15em] uppercase text-[#2C2C2C] font-medium mb-2"
                 >
-                  The details are handled before we arrive.
-                </p>
-                <p
-                  className="text-[15px] leading-[1.75] italic"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                >
-                  Licensed construction background. Fully insured. Workers&rsquo; comp
-                  certified. Building-compliant for Boston&rsquo;s managed properties.
-                </p>
-                <GoldRule className="mt-6" />
+                  Full Name <span className="text-[#B8956A]">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Your name"
+                  className="w-full px-4 py-3 bg-white border border-[#C9C0B5] text-[#2C2C2C] placeholder-[#C9C0B5] text-sm font-light focus:outline-none focus:border-[#B8956A] transition-colors duration-200"
+                />
               </div>
 
-              <p
-                className="text-[14px] leading-[1.75] italic"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                Every inquiry is reviewed personally by Justin Yurasits.
-              </p>
-            </div>
+              {/* Email — NEW FIELD */}
+              <div>
+                <label
+                  htmlFor="email"
+                  className="block text-xs tracking-[0.15em] uppercase text-[#2C2C2C] font-medium mb-2"
+                >
+                  Email Address <span className="text-[#B8956A]">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="your@email.com"
+                  className="w-full px-4 py-3 bg-white border border-[#C9C0B5] text-[#2C2C2C] placeholder-[#C9C0B5] text-sm font-light focus:outline-none focus:border-[#B8956A] transition-colors duration-200"
+                />
+              </div>
 
-            {/* Right: form or confirmation */}
-            <div>
-              {state.succeeded ? (
-                <div className="flex flex-col items-center text-center py-12">
-                  <GoldRule className="w-16 mb-10" />
-                  <p
-                    className="text-[18px] md:text-[22px] leading-[1.75] italic"
-                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+              {/* Phone */}
+              <div>
+                <label
+                  htmlFor="phone"
+                  className="block text-xs tracking-[0.15em] uppercase text-[#2C2C2C] font-medium mb-2"
+                >
+                  Phone Number
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="(617) 000-0000"
+                  className="w-full px-4 py-3 bg-white border border-[#C9C0B5] text-[#2C2C2C] placeholder-[#C9C0B5] text-sm font-light focus:outline-none focus:border-[#B8956A] transition-colors duration-200"
+                />
+              </div>
+
+              {/* Service Type */}
+              <div>
+                <label
+                  htmlFor="service"
+                  className="block text-xs tracking-[0.15em] uppercase text-[#2C2C2C] font-medium mb-2"
+                >
+                  I am inquiring about <span className="text-[#B8956A]">*</span>
+                </label>
+                <select
+                  id="service"
+                  name="service"
+                  required
+                  defaultValue=""
+                  className="w-full px-4 py-3 bg-white border border-[#C9C0B5] text-[#2C2C2C] text-sm font-light focus:outline-none focus:border-[#B8956A] transition-colors duration-200 appearance-none cursor-pointer"
+                  style={{
+                    backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B8956A' strokeWidth='1.5' fill='none' strokeLinecap='round'/%3E%3C/svg%3E")`,
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'right 16px center',
+                    paddingRight: '40px',
+                  }}
+                >
+                  <option value="" disabled>Select a service</option>
+                  <option value="Recurring Interior Care & Cleaning">Recurring Interior Care &amp; Cleaning</option>
+                  <option value="Interior Painting & Refresh">Interior Painting &amp; Refresh</option>
+                  <option value="One-Time Interior Cleaning">One-Time Interior Cleaning</option>
+                  <option value="Pre-Sale Preparation">Pre-Sale Preparation</option>
+                  <option value="Move-In / Move-Out Service">Move-In / Move-Out Service</option>
+                  <option value="Private Home Services">Private Home Services</option>
+                  <option value="Realtor / Partner Inquiry">Realtor / Partner Inquiry</option>
+                  <option value="Interior Designer Inquiry">Interior Designer Inquiry</option>
+                  <option value="General Inquiry">General Inquiry</option>
+                </select>
+              </div>
+
+              {/* Message */}
+              <div>
+                <label
+                  htmlFor="message"
+                  className="block text-xs tracking-[0.15em] uppercase text-[#2C2C2C] font-medium mb-2"
+                >
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  rows={5}
+                  placeholder="Tell us about your home and what you are looking for."
+                  className="w-full px-4 py-3 bg-white border border-[#C9C0B5] text-[#2C2C2C] placeholder-[#C9C0B5] text-sm font-light focus:outline-none focus:border-[#B8956A] transition-colors duration-200 resize-none"
+                />
+              </div>
+
+              {/* Address (optional — useful context for scoping) */}
+              <div>
+                <label
+                  htmlFor="address"
+                  className="block text-xs tracking-[0.15em] uppercase text-[#2C2C2C] font-medium mb-2"
+                >
+                  Property Address{' '}
+                  <span className="text-[#C9C0B5] normal-case tracking-normal font-light">
+                    (optional)
+                  </span>
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Boston, MA"
+                  className="w-full px-4 py-3 bg-white border border-[#C9C0B5] text-[#2C2C2C] placeholder-[#C9C0B5] text-sm font-light focus:outline-none focus:border-[#B8956A] transition-colors duration-200"
+                />
+              </div>
+
+              {/* Error state */}
+              {status === 'error' && (
+                <p className="text-sm text-red-700 font-light">
+                  Something went wrong. Please try again or email us directly at{' '}
+                  <a
+                    href="mailto:info@beaconhillinteriors.com"
+                    className="underline underline-offset-2"
                   >
-                    Thank you for reaching out. We&rsquo;ll be in touch within one
-                    business day.
-                  </p>
-                  <GoldRule className="w-16 mt-10" />
-                </div>
-              ) : (
-                <form onSubmit={handleSubmit} className="flex flex-col gap-8" noValidate>
-
-                  {/* Name */}
-                  <div>
-                    <label htmlFor="name" style={labelBase}>Your Name *</label>
-                    <input
-                      id="name"
-                      type="text"
-                      name="name"
-                      required
-                      autoComplete="name"
-                      style={inputBase}
-                    />
-                    <ValidationError field="name" prefix="Name" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />
-                  </div>
-
-                  {/* Phone */}
-                  <div>
-                    <label htmlFor="phone" style={labelBase}>Phone Number</label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      name="phone"
-                      autoComplete="tel"
-                      style={inputBase}
-                    />
-                  </div>
-
-                  {/* Property */}
-                  <div>
-                    <label htmlFor="property" style={labelBase}>Property Address or Neighborhood *</label>
-                    <input
-                      id="property"
-                      type="text"
-                      name="property"
-                      required
-                      style={inputBase}
-                    />
-                    <ValidationError field="property" prefix="Property" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />
-                  </div>
-
-                  {/* Service Interest */}
-                  <div>
-                    <label htmlFor="service" style={labelBase}>Service Interest *</label>
-                    <select
-                      id="service"
-                      name="service"
-                      required
-                      defaultValue=""
-                      style={{ ...inputBase, cursor: "pointer", paddingRight: "24px" }}
-                    >
-                      <option value="" disabled style={{ color: "var(--bhi-warm-gray)" }}>Select a service</option>
-                      <option value="Recurring Interior Care & Cleaning">Recurring Interior Care &amp; Cleaning</option>
-                      <option value="Deep Cleaning / Initial Reset">Deep Cleaning / Initial Reset</option>
-                      <option value="Move-In / Move-Out Cleaning">Move-In / Move-Out Cleaning</option>
-                      <option value="Interior Painting & Refresh">Interior Painting &amp; Refresh</option>
-                      <option value="Private Home Services">Private Home Services</option>
-                      <option value="Pre-Sale Refresh / Move-In Readiness">Pre-Sale Refresh / Move-In Readiness</option>
-                      <option value="Punch List / Closeout Support">Punch List / Closeout Support</option>
-                      <option value="Selective Interior Improvements">Selective Interior Improvements</option>
-                      <option value="Other / Not Sure">Other / Not Sure</option>
-                    </select>
-                    <ValidationError field="service" prefix="Service" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />
-                  </div>
-
-                  {/* About your home */}
-                  <div>
-                    <label htmlFor="about" style={labelBase}>Tell us about your home *</label>
-                    <textarea
-                      id="about"
-                      name="about"
-                      required
-                      rows={5}
-                      style={{
-                        ...inputBase,
-                        borderBottom: "none",
-                        border: "0.5px solid var(--bhi-sand)",
-                        padding: "12px",
-                        resize: "vertical",
-                        lineHeight: "1.7",
-                      }}
-                    />
-                    <ValidationError field="about" prefix="This field" errors={state.errors} className="text-xs mt-2" style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)" }} />
-                  </div>
-
-                  {/* Referral */}
-                  <div>
-                    <label htmlFor="referral" style={labelBase}>How did you hear about us?</label>
-                    <input
-                      id="referral"
-                      type="text"
-                      name="referral"
-                      style={inputBase}
-                    />
-                  </div>
-
-                  {/* Global error */}
-                  {state.errors && Object.keys(state.errors).length > 0 && !state.succeeded && (
-                    <p
-                      className="text-[13px] leading-[1.7]"
-                      style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                    >
-                      Something went wrong. Please try again or email us directly at{" "}
-                      <a
-                        href="mailto:info@beaconhillinteriors.com"
-                        style={{ color: "var(--bhi-gold)" }}
-                      >
-                        info@beaconhillinteriors.com
-                      </a>
-                    </p>
-                  )}
-
-                  {/* Submit */}
-                  <div>
-                    <button
-                      type="submit"
-                      disabled={state.submitting}
-                      className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80 disabled:opacity-50"
-                      style={{
-                        fontFamily: "var(--bhi-font-sans)",
-                        backgroundColor: "var(--bhi-charcoal)",
-                        color: "var(--bhi-white)",
-                        border: "none",
-                        cursor: state.submitting ? "wait" : "pointer",
-                      }}
-                    >
-                      {state.submitting ? "Sending…" : "Inquire About Availability"}
-                    </button>
-                  </div>
-
-                </form>
+                    info@beaconhillinteriors.com
+                  </a>
+                  .
+                </p>
               )}
-            </div>
 
+              {/* Submit */}
+              <div className="pt-2">
+                <button
+                  type="submit"
+                  disabled={status === 'submitting'}
+                  className="w-full bg-[#2C2C2C] text-white text-xs tracking-[0.25em] uppercase py-4 font-medium hover:bg-[#B8956A] transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                >
+                  {status === 'submitting' ? 'Sending…' : 'Send Inquiry'}
+                </button>
+              </div>
+
+              {/* Confidence line */}
+              <p className="text-center text-[#C9C0B5] text-xs font-light tracking-wide pt-2">
+                Confidence Without Supervision.
+              </p>
+
+            </form>
+          )}
+        </div>
+      </section>
+
+      {/* ── Contact Details Strip ─────────────────────────────────── */}
+      <section className="bg-[#2C2C2C] px-6 py-12">
+        <div className="max-w-2xl mx-auto flex flex-col md:flex-row gap-8 md:gap-16 text-center md:text-left">
+          <div>
+            <p className="text-[#B8956A] text-xs tracking-[0.2em] uppercase mb-2">Phone</p>
+            <a
+              href="tel:7812278472"
+              className="text-white text-sm font-light hover:text-[#B8956A] transition-colors"
+            >
+              (781) 227-8472
+            </a>
+          </div>
+          <div>
+            <p className="text-[#B8956A] text-xs tracking-[0.2em] uppercase mb-2">Email</p>
+            <a
+              href="mailto:info@beaconhillinteriors.com"
+              className="text-white text-sm font-light hover:text-[#B8956A] transition-colors"
+            >
+              info@beaconhillinteriors.com
+            </a>
+          </div>
+          <div>
+            <p className="text-[#B8956A] text-xs tracking-[0.2em] uppercase mb-2">Service Area</p>
+            <p className="text-[#C9C0B5] text-sm font-light">Greater Boston, MA</p>
           </div>
         </div>
       </section>
-    </>
-  );
+
+    </main>
+  )
 }
