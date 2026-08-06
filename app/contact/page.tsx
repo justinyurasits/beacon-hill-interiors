@@ -234,7 +234,8 @@ export default function ContactPage() {
             <p className="text-[#B8956A] text-xs tracking-[0.2em] uppercase mb-2">Phone</p>
             <a
               href="tel:7812278472"
-              className="text-white text-sm font-light hover:text-[#B8956A] transition-colors"
+              className="text-sm font-light transition-colors hover:text-[#B8956A]"
+              style={{ color: "#C9C0B5" }}
             >
               (781) 227-8472
             </a>
@@ -243,7 +244,8 @@ export default function ContactPage() {
             <p className="text-[#B8956A] text-xs tracking-[0.2em] uppercase mb-2">Email</p>
             <a
               href="mailto:info@beaconhillinteriors.com"
-              className="text-white text-sm font-light hover:text-[#B8956A] transition-colors"
+              className="text-sm font-light transition-colors hover:text-[#B8956A]"
+              style={{ color: "#C9C0B5" }}
             >
               info@beaconhillinteriors.com
             </a>
