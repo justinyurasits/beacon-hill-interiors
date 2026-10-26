@@ -16,7 +16,7 @@ const pillars = [
     href: "/residential",
     label: "Residential Interior Care",
     image: "/images/cleaning.webp",
-    body: "Premium cleaning and recurring care for private residences. White-glove standard, consistent team, no excuses.",
+    body: "Premium cleaning and recurring care for private residences. White-glove standard, held every visit, no excuses.",
   },
   {
     n: "02",
