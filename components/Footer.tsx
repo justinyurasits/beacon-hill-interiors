@@ -46,7 +46,7 @@ export default function Footer() {
           <div>
             <p
               className="text-[10px] uppercase tracking-[0.2em] mb-4"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
             >
               Services
             </p>
@@ -56,7 +56,7 @@ export default function Footer() {
                   key={link.href}
                   href={link.href}
                   className="text-xs uppercase tracking-[0.15em] transition-opacity hover:opacity-60"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
                 >
                   {link.label}
                 </Link>
@@ -68,7 +68,7 @@ export default function Footer() {
           <div>
             <p
               className="text-[10px] uppercase tracking-[0.2em] mb-4"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
             >
               Company
             </p>
@@ -78,7 +78,7 @@ export default function Footer() {
                   key={link.href}
                   href={link.href}
                   className="text-xs uppercase tracking-[0.15em] transition-opacity hover:opacity-60"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
                 >
                   {link.label}
                 </Link>
@@ -90,27 +90,27 @@ export default function Footer() {
           <div className="md:text-right">
             <p
               className="text-[10px] uppercase tracking-[0.2em] mb-4"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
             >
               Contact
             </p>
             <a
               href="tel:+17812278472"
               className="text-xs tracking-wide transition-opacity hover:opacity-60 block"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
             >
               (781) 227-8472
             </a>
             <a
               href="mailto:info@beaconhillinteriors.com"
               className="text-xs tracking-wide transition-opacity hover:opacity-60 block mt-1"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
             >
               info@beaconhillinteriors.com
             </a>
             <p
               className="text-xs tracking-wide mt-1"
-              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
             >
               Boston, Massachusetts
             </p>
@@ -123,13 +123,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-3">
           <p
             className="text-[11px] tracking-wide"
-            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
           >
             © 2026 Beacon Hill Interiors. Licensed · Insured · Building-Compliant.
           </p>
           <p
             className="text-[11px] italic tracking-wide"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-sand)" }}
           >
             One team. Four capabilities. One point of accountability.
           </p>

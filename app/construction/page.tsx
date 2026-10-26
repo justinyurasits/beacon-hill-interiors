@@ -7,16 +7,18 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "Interior Construction & Refresh — Beacon Hill Interiors",
   description:
-    "Painting, cosmetic updates, kitchen and bath refresh, and selective interior construction for Boston properties. Licensed. Done correctly the first time.",
+    "Painting, routine repairs, drywall and finish carpentry, kitchen and bath refresh, and ongoing interior maintenance for Boston properties. Licensed. Done correctly the first time.",
 };
 
 const workItems = [
   "Interior painting — rooms, ceilings, trim, millwork, doors",
   "Paint touch-up programs for maintained residences",
+  "Routine repairs — the small items that accumulate in a lived-in or high-use space",
+  "Drywall repair — patching, skim coating, and a seamless repaint",
+  "Finish carpentry — trim, casing, baseboard, doors, shelving, and built-in adjustments",
   "Kitchen cosmetic refresh — cabinet painting, hardware, backsplash",
   "Bath refresh — tile, fixtures, caulking, accessories",
-  "Carpentry repairs — trim, molding, doors, shelving",
-  "Minor interior repairs — walls, surfaces, finishes",
+  "Ongoing interior maintenance — scheduled upkeep for residences, rentals, and managed properties",
   "Pre-sale preparation — full interior refresh before listing",
   "Buyer reset — cleaning, painting, and refresh after closing",
   "Tenant turnover — full unit refresh between leases",
@@ -49,9 +51,10 @@ export default function ConstructionPage() {
             className="text-[17px] leading-[1.85] max-w-xl"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.85)" }}
           >
-            Interior painting, cosmetic updates, kitchen and bath refresh, and
-            selective interior construction — for clients who need it done correctly
-            the first time and don&rsquo;t want to manage it themselves.
+            Interior painting, routine repairs, drywall and finish carpentry, kitchen
+            and bath refresh, and ongoing interior maintenance — for clients who need
+            it done correctly the first time and don&rsquo;t want to manage it
+            themselves.
           </p>
         </div>
       </section>
@@ -77,15 +80,25 @@ export default function ConstructionPage() {
                 touch and most general contractors price too high. Painting a condo
                 before a sale. Refreshing a kitchen without gutting it. Replacing
                 hardware, updating fixtures, patching and repainting after tenants.
-                Touching up millwork on a brownstone that hasn&rsquo;t been touched in
-                five years.
+                Patching drywall after a move. Re-hanging a door that hasn&rsquo;t closed
+                right in years. Touching up millwork on a brownstone that hasn&rsquo;t
+                been touched in five.
+              </p>
+              <p
+                className="text-[16px] leading-[1.85] mb-6"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              >
+                It doesn&rsquo;t have to be one-off. For owners and managers who want a
+                property kept right, BHI offers ongoing interior maintenance — routine
+                repairs, touch-ups, and finish work on a schedule, so small issues
+                never become visible ones.
               </p>
               <p
                 className="text-[16px] leading-[1.85]"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                This is selective, interior-focused construction work — done at a
-                professional standard with a licensed team.
+                This is selective, interior-focused construction and maintenance work —
+                done at a professional standard with a licensed team.
               </p>
             </div>
 
@@ -135,7 +148,7 @@ export default function ConstructionPage() {
               },
               {
                 title: "Property Owners & Investors",
-                body: "Between tenants, after renovations, or when a unit simply needs to be brought back to standard.",
+                body: "Between tenants, after renovations, or when a unit simply needs to be brought back to standard — or kept there with scheduled maintenance.",
               },
               {
                 title: "Developers & GCs",
@@ -216,7 +229,7 @@ export default function ConstructionPage() {
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
             style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
           >
-            Tell Us About the Project
+            Request a Proposal
           </Link>
         </div>
       </section>

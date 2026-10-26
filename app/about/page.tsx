@@ -8,7 +8,7 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "About — Beacon Hill Interiors",
   description:
-    "A private interior services firm with deep experience in Boston's most demanding residential buildings, luxury hotels, and high-end construction projects.",
+    "A private interior services firm founded by a Massachusetts Licensed Construction Supervisor who spent years running high-end residential construction inside Boston's most demanding buildings.",
 };
 
 const credentials = [
@@ -17,8 +17,8 @@ const credentials = [
     body: "Massachusetts Licensed Construction Supervisor and General Contractor. We understand interior work at a professional level — not just how it looks, but how it's built.",
   },
   {
-    title: "Managed Building Experience",
-    body: "Years working inside Boston's most demanding residential and commercial buildings. We know service entrance protocols, COI requirements, and building manager relationships.",
+    title: "Managed Building Know-How",
+    body: "Our founder's years running high-end residential construction inside landmark Boston buildings mean service entrance protocols, COI requirements, and building manager relationships are second nature.",
   },
   {
     title: "Full Insurance Coverage",
@@ -69,9 +69,8 @@ export default function AboutPage() {
             className="text-[17px] leading-[1.85] text-center max-w-2xl mb-12"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            Beacon Hill Interiors is a private interior services firm with deep
-            experience in Boston&rsquo;s most demanding residential buildings, luxury
-            hotels, and high-end construction projects.
+            Beacon Hill Interiors is a private interior services firm built by
+            someone who has run work inside Boston&rsquo;s most demanding buildings.
           </p>
 
           <GoldRule className="w-full max-w-lg" />
@@ -106,14 +105,22 @@ export default function AboutPage() {
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            Justin Yurasits founded Beacon Hill Interiors after years of working
-            in Boston&rsquo;s premier residential construction — managing projects inside
-            Back Bay brownstones, luxury high-rises, and the city&rsquo;s most complex
-            interior environments. That experience built a set of skills that
-            translated directly into how BHI operates: a deep understanding of
-            surfaces, building systems, and construction method; familiarity with
-            how managed buildings and property managers operate; and an eye for
-            quality that comes from working alongside people who accepted nothing less.
+            Justin Yurasits founded Beacon Hill Interiors after years as a project
+            manager and site superintendent in Boston&rsquo;s premier residential
+            construction — running projects inside Back Bay brownstones, luxury
+            high-rises, and landmark buildings, more than $30M in total project
+            value. He holds a Massachusetts Licensed Construction Supervisor license
+            and a General Contractor license.
+          </p>
+          <p
+            className="text-[16px] leading-[1.95]"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            That experience translates directly into how BHI operates: a deep
+            understanding of surfaces, building systems, and construction method;
+            fluency in how managed buildings, property managers, and hospitality
+            properties operate; and an eye for quality that comes from working
+            alongside people who accepted nothing less.
           </p>
           <p
             className="text-[16px] leading-[1.95]"
@@ -264,7 +271,7 @@ export default function AboutPage() {
               color: "var(--bhi-charcoal)",
             }}
           >
-            Contact Us
+            Request a Proposal
           </Link>
         </div>
       </section>

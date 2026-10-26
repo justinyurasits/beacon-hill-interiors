@@ -40,7 +40,7 @@ export default function ContactPage() {
             Beacon Hill Interiors
           </p>
           <h1 className="text-white font-serif text-4xl md:text-5xl font-light leading-tight mb-6">
-            Inquire About Availability
+            Request a Proposal
           </h1>
           <p className="text-[#C9C0B5] text-base md:text-lg font-light leading-relaxed max-w-xl mx-auto">
             We maintain a limited recurring client list to preserve consistency,

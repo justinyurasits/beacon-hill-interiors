@@ -17,7 +17,7 @@ const includes = [
   "Living and dining areas, bedrooms",
   "Floors, baseboards, trim, and millwork",
   "Seasonal deep-clean and periodic refresh options",
-  "Discreet, background-checked service professionals",
+  "Discreet, W-2 employed service professionals",
 ];
 
 export default function ResidentialPage() {
@@ -238,7 +238,7 @@ export default function ResidentialPage() {
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
             style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
           >
-            Submit an Inquiry
+            Request a Proposal
           </Link>
         </div>
       </section>

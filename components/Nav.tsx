@@ -150,7 +150,7 @@ export default function Nav() {
               }}
               onClick={() => setMenuOpen(false)}
             >
-              Inquire About Availability
+              Request a Proposal
             </Link>
           </nav>
         </div>

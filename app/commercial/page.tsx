@@ -7,10 +7,10 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "Commercial & Hospitality Cleaning — Beacon Hill Interiors",
   description:
-    "Professional cleaning and interior maintenance for hotels, managed buildings, and commercial spaces across Greater Boston. One accountable contact.",
+    "Professional cleaning and interior maintenance for hotels, managed buildings, and commercial spaces across Greater Boston. Founder-led, licensed, and fully insured. One accountable contact.",
 };
 
-const whereWeWork = [
+const builtFor = [
   "Hotel guest rooms and suites",
   "Hotel lobbies, corridors, and common areas",
   "Managed condominium buildings — common areas, lobbies, corridors",
@@ -46,9 +46,10 @@ export default function CommercialPage() {
             className="text-[17px] leading-[1.85] max-w-xl"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.85)" }}
           >
-            Beacon Hill Interiors provides professional cleaning and interior
-            maintenance for hotels, managed buildings, commercial spaces, and
-            hospitality operations across Greater Boston.
+            Professional cleaning and interior maintenance for hotels, managed
+            buildings, commercial spaces, and hospitality properties across Greater
+            Boston — built by someone who has run work inside the city&rsquo;s most
+            demanding buildings.
           </p>
         </div>
       </section>
@@ -63,7 +64,7 @@ export default function CommercialPage() {
                 className="text-[26px] md:text-[34px] leading-[1.2] mb-8"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
               >
-                Quality-first service at commercial scale.
+                Quality-first service, built for commercial pace.
               </h2>
               <GoldRule className="mb-8" />
               <p
@@ -75,14 +76,23 @@ export default function CommercialPage() {
                 margin for visible failure.
               </p>
               <p
+                className="text-[16px] leading-[1.85] mb-6"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              >
+                Founder Justin Yurasits spent years as a project manager and site
+                superintendent on high-end residential construction inside landmark
+                Boston buildings — more than $30M in project value, delivered under
+                strict building management, tight access windows, and residents who
+                should never notice the work happening.
+              </p>
+              <p
                 className="text-[16px] leading-[1.85]"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                BHI brings the same attention to detail we apply to private
-                residences into hotel rooms, lobbies, common areas, and commercial
-                interiors. We are not a commodity cleaning operation. We are a
-                quality-first service provider that happens to work at commercial
-                scale.
+                That is the discipline BHI brings to hotel rooms, lobbies, common
+                areas, and commercial interiors. We understand how managed buildings
+                and hospitality properties operate. We are not a commodity cleaning
+                operation, and we don&rsquo;t intend to become one.
               </p>
             </div>
 
@@ -91,10 +101,10 @@ export default function CommercialPage() {
                 className="text-[11px] uppercase tracking-[0.2em] mb-6"
                 style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
               >
-                Where We Work
+                Built For
               </p>
               <ul className="flex flex-col gap-4">
-                {whereWeWork.map((item) => (
+                {builtFor.map((item) => (
                   <li
                     key={item}
                     className="flex items-start gap-3 text-[15px] leading-[1.75]"
@@ -175,8 +185,8 @@ export default function CommercialPage() {
                 body: "You work with one person. Not a call center. Not a dispatch queue. When something needs attention, you reach the person responsible.",
               },
               {
-                title: "Managed Building Experience",
-                body: "We know how Boston's commercial and residential buildings operate — service entrance protocols, COI requirements, elevator scheduling, and building management relationships.",
+                title: "Managed Building Know-How",
+                body: "Built on years running work inside Boston's landmark residential buildings — service entrance protocols, COI requirements, elevator scheduling, and building management relationships are second nature.",
               },
               {
                 title: "Licensed and Fully Insured",
@@ -222,7 +232,7 @@ export default function CommercialPage() {
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
             style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
           >
-            Talk to Us About Your Operation
+            Request a Proposal
           </Link>
         </div>
       </section>

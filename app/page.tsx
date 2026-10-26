@@ -30,7 +30,7 @@ const pillars = [
     href: "/construction",
     label: "Interior Construction & Refresh",
     image: "/images/painting.webp",
-    body: "Painting, cosmetic updates, kitchen and bath refresh, selective interior improvements. Done correctly the first time.",
+    body: "Painting, routine repairs, drywall and finish carpentry, kitchen and bath refresh, and ongoing interior maintenance. Done correctly the first time.",
   },
   {
     n: "04",
@@ -44,19 +44,42 @@ const pillars = [
 const audiences = [
   {
     title: "Homeowners",
-    body: "Recurring interior care and maintenance for private residences. One team, one standard, no vendor management.",
+    href: "/residential",
+    service: "Residential Interior Care",
+    body: "A dependable partner for ongoing cleaning, repairs, and interior care. One team, one standard, no vendor management.",
   },
   {
     title: "Hotels & Commercial",
-    body: "Room turns, common area cleaning, and commercial maintenance — for operations that cannot afford a visible failure.",
+    href: "/commercial",
+    service: "Commercial & Hospitality",
+    body: "Reliable cleaning and maintenance that support daily operations and property standards — for properties that cannot afford a visible failure.",
   },
   {
     title: "Contractors & Developers",
-    body: "Post-construction cleaning, punch list completion, and occupancy prep — for GCs who need the final phase handled.",
+    href: "/punchlist",
+    service: "Punch List & Closeout",
+    body: "Skilled punch-list support, final cleaning, and finishing work to bring projects to completion — the final phase, handled.",
   },
   {
     title: "Realtors & Designers",
-    body: "Pre-listing preparation, post-installation detail, and interior refresh — before the photography, staging, or handoff.",
+    href: "/construction",
+    service: "Interior Construction & Refresh",
+    body: "Painting, repairs, detailing, and property preparation before photography, staging, or handoff.",
+  },
+];
+
+const longTerm = [
+  {
+    title: "Scheduled Residential Care",
+    body: "Weekly, biweekly, or monthly interior care for private residences, with seasonal deep cleaning built into the calendar rather than left to chance.",
+  },
+  {
+    title: "Ongoing Property Maintenance",
+    body: "Routine repairs, touch-ups, and interior upkeep for managed buildings, rental units, and commercial spaces — handled before small issues become visible ones.",
+  },
+  {
+    title: "Tailored to the Property",
+    body: "No packaged tiers. Every arrangement is scoped to the building, its use, and the standard you expect — and adjusted as those needs change.",
   },
 ];
 
@@ -103,9 +126,10 @@ export default function Home() {
               textShadow: "0 1px 4px rgba(0,0,0,0.4)",
             }}
           >
-            Beacon Hill Interiors is a Boston interior services firm handling
-            residential care, commercial cleaning, selective interior construction,
-            and construction closeout — for clients who won&rsquo;t accept the ordinary.
+            Beacon Hill Interiors provides professional cleaning, routine
+            maintenance, painting, interior improvements, and construction closeout
+            services for Greater Boston&rsquo;s residential, commercial, and
+            hospitality properties.
           </p>
 
           <Link
@@ -113,7 +137,7 @@ export default function Home() {
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 mb-10 transition-opacity hover:opacity-80"
             style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
           >
-            Inquire About Availability
+            Request a Proposal
           </Link>
 
           <p
@@ -234,9 +258,11 @@ export default function Home() {
                 className="text-[17px] leading-[1.85] mb-10"
                 style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
               >
-                BHI is built for Boston. Our team has worked in the city&rsquo;s most
-                demanding residential buildings, luxury hotels, and high-end
-                construction projects. We understand how managed buildings work,
+                BHI was built by someone who has run work inside Boston&rsquo;s most
+                demanding buildings. Founder Justin Yurasits spent years as a project
+                manager and site superintendent on high-end residential construction
+                in landmark Boston addresses — more than $30M in project value. He
+                understands how managed buildings and hospitality properties operate,
                 what GCs and developers need at closeout, and what private clients
                 expect when they open the door.
               </p>
@@ -300,8 +326,10 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {audiences.map((a) => (
-              <div
+              <Link
                 key={a.title}
+                href={a.href}
+                className="flex flex-col transition-opacity hover:opacity-75"
                 style={{ border: "0.5px solid var(--bhi-sand)", padding: "32px 28px" }}
               >
                 <GoldRule className="mb-6" />
@@ -312,12 +340,18 @@ export default function Home() {
                   {a.title}
                 </p>
                 <p
-                  className="text-[15px] leading-[1.8]"
+                  className="text-[15px] leading-[1.8] mb-6 flex-1"
                   style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
                 >
                   {a.body}
                 </p>
-              </div>
+                <span
+                  className="text-[10px] uppercase tracking-[0.18em] inline-flex items-center gap-2"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                >
+                  {a.service} <span aria-hidden="true">→</span>
+                </span>
+              </Link>
             ))}
           </div>
         </div>
@@ -357,6 +391,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* A PARTNER FOR THE LONG TERM */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: "#252525" }}>
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="flex flex-col md:flex-row gap-16 md:gap-24">
+            <div className="flex-1">
+              <SectionLabel className="mb-8" style={{ color: "var(--bhi-gold)" }}>
+                Ongoing Service
+              </SectionLabel>
+              <h2
+                className="text-[28px] md:text-[38px] leading-[1.2] mb-8"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)" }}
+              >
+                A Partner for the Long Term.
+              </h2>
+              <p
+                className="text-[17px] leading-[1.85] mb-6"
+                style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
+              >
+                Some properties need a project. Most need someone who keeps showing
+                up. BHI offers recurring service arrangements — from scheduled
+                residential care to ongoing commercial and property maintenance.
+              </p>
+              <p
+                className="text-[17px] leading-[1.85] mb-10"
+                style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
+              >
+                Each arrangement is built around the property: what it needs, how
+                often, and to what standard. Set it once. We keep it there.
+              </p>
+              <Link
+                href="/contact"
+                className="text-xs uppercase tracking-[0.2em] inline-flex items-center gap-2 transition-opacity hover:opacity-70"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+              >
+                Discuss an ongoing arrangement <span aria-hidden="true">→</span>
+              </Link>
+            </div>
+
+            <div className="flex-1 flex flex-col justify-center gap-8">
+              {longTerm.map((item) => (
+                <div key={item.title}>
+                  <GoldRule className="mb-5" style={{ opacity: 0.3 }} />
+                  <p
+                    className="text-[11px] uppercase tracking-[0.2em] mb-3"
+                    style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                  >
+                    {item.title}
+                  </p>
+                  <p
+                    className="text-[15px] leading-[1.8]"
+                    style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
+                  >
+                    {item.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* PROCESS */}
       <section className="py-24 md:py-32 bg-bhi-white">
         <div className="max-w-6xl mx-auto px-8">
@@ -374,18 +469,18 @@ export default function Home() {
             {[
               {
                 n: "01",
-                title: "Inquiry",
-                body: "Reach out through our contact form or by referral. We respond within one business day and schedule a brief conversation to learn what you need.",
+                title: "Tell Us What You Need",
+                body: "Share information about your property, project, or ongoing service requirements. We'll discuss your priorities, timing, and expectations.",
               },
               {
                 n: "02",
-                title: "Scope & Walkthrough",
-                body: "We assess the space and put together a service plan built around what you actually need — a residence, a property, or a project. No generic proposals.",
+                title: "A Clear Scope & Service Plan",
+                body: "We evaluate the work, coordinate any necessary walkthroughs, and prepare a proposal outlining services, schedule, and responsibilities.",
               },
               {
                 n: "03",
-                title: "Service Begins",
-                body: "Once scope and schedule are agreed, we get to work. We stay accountable to the standard from day one and communicate proactively.",
+                title: "Professional Execution & Follow-Through",
+                body: "Our team coordinates and performs the agreed work, communicates progress, and addresses outstanding details through completion or ongoing service.",
               },
             ].map((step) => (
               <div key={step.n} className="flex flex-col">
@@ -424,22 +519,23 @@ export default function Home() {
               className="text-[28px] md:text-[40px] uppercase tracking-[0.06em] leading-[1.2] mb-6"
               style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)" }}
             >
-              Work with a team that takes it seriously.
+              Let&rsquo;s Get Your Property Taken Care Of.
             </h2>
             <GoldRule className="mb-8 w-full max-w-xs" />
             <p
               className="text-[16px] leading-[1.8] mb-10"
               style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.82)", maxWidth: "540px" }}
             >
-              Whether it&rsquo;s a residence, a hotel, a renovation, or a punch list —
-              reach out and let us know what you&rsquo;re working with.
+              From recurring cleaning and maintenance to painting, interior
+              improvements, and construction closeout, we&rsquo;re ready to discuss
+              what your property or project needs.
             </p>
             <Link
               href="/contact"
               className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
               style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
             >
-              Contact Us
+              Request a Proposal
             </Link>
           </div>
         </div>

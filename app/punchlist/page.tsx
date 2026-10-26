@@ -189,8 +189,9 @@ export default function PunchlistPage() {
             style={{ fontFamily: "var(--bhi-font)", color: "#9A9490", maxWidth: "680px" }}
           >
             BHI does both — we clean to a construction standard and we handle the
-            minor finish items that remain. Licensed. Insured. Familiar with how
-            Boston&rsquo;s residential and commercial buildings work.
+            minor finish items that remain. Licensed. Insured. Built by a former
+            site superintendent who has run high-end work inside Boston&rsquo;s most
+            demanding buildings.
           </p>
         </div>
       </section>
@@ -213,7 +214,7 @@ export default function PunchlistPage() {
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
             style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
           >
-            Contact Us
+            Request a Proposal
           </Link>
         </div>
       </section>
