@@ -12,12 +12,12 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Beacon Hill Interiors — Private Home Services, Boston",
+  title: "Beacon Hill Interiors — Interior Services, Boston",
   description:
-    "Private home care, interior painting, and residential refresh services for discerning homes in Boston's finest neighborhoods.",
+    "Residential care, commercial cleaning, interior construction, and construction closeout services for Boston's most demanding properties. Licensed. Insured. One accountable team.",
   openGraph: {
     title: "Beacon Hill Interiors",
-    description: "Quietly exceptional interiors thoughtfully managed.",
+    description: "One team. Four capabilities. One point of accountability.",
     siteName: "Beacon Hill Interiors",
   },
 };

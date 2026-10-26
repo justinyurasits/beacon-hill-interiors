@@ -8,40 +8,48 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "About — Beacon Hill Interiors",
   description:
-    "A private home services firm for Boston's most discerning residences. Small by design. Exceptional by standard.",
+    "A private interior services firm with deep experience in Boston's most demanding residential buildings, luxury hotels, and high-end construction projects.",
 };
 
-const principles = [
+const credentials = [
   {
-    title: "Be Absurdly Reliable",
-    body: "Show up when we say we will. Start when we say we'll start. Finish when we say we'll finish. Follow through on every commitment, no matter how small.",
+    title: "Licensed Construction Background",
+    body: "Massachusetts Licensed Construction Supervisor and General Contractor. We understand interior work at a professional level — not just how it looks, but how it's built.",
   },
   {
-    title: "Zero Drama, Always",
-    body: "Problems are solved, not escalated. When things go sideways — and they will — we respond with calm, competence, and a plan.",
+    title: "Managed Building Experience",
+    body: "Years working inside Boston's most demanding residential and commercial buildings. We know service entrance protocols, COI requirements, and building manager relationships.",
   },
   {
-    title: "The Standard Is the Standard",
-    body: "The finish is the work. The last five percent gets the same attention as the first ninety-five. If it doesn't pass our inspection, it doesn't pass.",
+    title: "Full Insurance Coverage",
+    body: "General liability on every engagement. Workers' compensation for all team members. Certificate of insurance available on request.",
   },
   {
-    title: "Respect the Home",
-    body: "We move through every residence as if it were our own. Carefully, deliberately, and with full awareness of what we're trusted with.",
+    title: "One Point of Accountability",
+    body: "You work with one person. Justin Yurasits is involved in every client relationship, every scope of work, and every standard we're held to.",
   },
-  {
-    title: "Protect the Building",
-    body: "We understand managed buildings. Every job begins and ends with the protocols, protection, and access procedures that Boston's finest properties require.",
-  },
-  {
-    title: "Leave It Better Than We Found It",
-    body: "Not just cleaner, not just painted. Better. That is the measure we hold every engagement to.",
-  },
+];
+
+const areas = [
+  "Beacon Hill",
+  "Back Bay",
+  "South End",
+  "Seaport",
+  "Charlestown",
+  "Brookline",
+  "Cambridge",
+  "Somerville",
+  "Newton",
+  "Wellesley",
+  "Lexington",
+  "Needham",
+  "Chestnut Hill",
 ];
 
 export default function AboutPage() {
   return (
     <>
-      {/* ── LOGO HERO MOMENT ─────────────────────────────────────────── */}
+      {/* ── HERO ─────────────────────────────────────────────────────── */}
       <section className="bg-bhi-white pt-[72px]">
         <div className="flex flex-col items-center px-8 pt-20 pb-16">
           <Logo height={96} className="text-bhi-charcoal mb-14" />
@@ -51,107 +59,69 @@ export default function AboutPage() {
           </SectionLabel>
 
           <h1
-            className="text-[32px] md:text-[46px] lg:text-[54px] uppercase tracking-[0.07em] leading-[1.15] text-center max-w-3xl mb-12"
+            className="text-[32px] md:text-[46px] lg:text-[54px] uppercase tracking-[0.07em] leading-[1.15] text-center max-w-3xl mb-8"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            Small by design. Exceptional by standard.
+            Built on Years Inside Boston&rsquo;s Finest Properties.
           </h1>
+
+          <p
+            className="text-[17px] leading-[1.85] text-center max-w-2xl mb-12"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            Beacon Hill Interiors is a private interior services firm with deep
+            experience in Boston&rsquo;s most demanding residential buildings, luxury
+            hotels, and high-end construction projects.
+          </p>
 
           <GoldRule className="w-full max-w-lg" />
         </div>
       </section>
 
-      {/* ── BODY COPY ────────────────────────────────────────────────── */}
+      {/* ── THE STORY ────────────────────────────────────────────────── */}
       <section className="bg-bhi-white pt-12 pb-24">
         <div
           className="mx-auto px-8 flex flex-col gap-6"
           style={{ maxWidth: "640px" }}
         >
+          <SectionLabel className="mb-2">About Beacon Hill Interiors</SectionLabel>
+          <h2
+            className="text-[22px] md:text-[28px] leading-[1.3] mb-2"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+          >
+            Small by design. Serious by standard.
+          </h2>
+          <GoldRule className="mb-4" />
           <p
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            Beacon Hill Interiors is a private interior services firm serving
-            discerning homeowners and residences across Greater Boston.
+            BHI was built out of a simple observation: most home and commercial
+            service providers in Boston are either too large to care or too small
+            to be reliable. There was a gap between commodity cleaning and real
+            professional service — and that gap was exactly where the best
+            properties needed help the most.
           </p>
           <p
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            We provide premium interior care, cleaning, painting, and private home
-            services for clients who value discretion, cleanliness, and calm
-            execution.
+            Justin Yurasits founded Beacon Hill Interiors after years of working
+            in Boston&rsquo;s premier residential construction — managing projects inside
+            Back Bay brownstones, luxury high-rises, and the city&rsquo;s most complex
+            interior environments. That experience built a set of skills that
+            translated directly into how BHI operates: a deep understanding of
+            surfaces, building systems, and construction method; familiarity with
+            how managed buildings and property managers operate; and an eye for
+            quality that comes from working alongside people who accepted nothing less.
           </p>
           <p
             className="text-[16px] leading-[1.95]"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
           >
-            Our work is built around a simple idea: a well-run home should feel
-            effortless. The space should be clean, protected, maintained, and
-            thoughtfully managed by people who understand the standards of refined
-            residential environments.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            Beacon Hill Interiors was founded by Justin Yurasits, a Massachusetts
-            Licensed Construction Supervisor and licensed General Contractor with
-            hands-on experience in high-end residential interiors, luxury
-            condominiums, brownstones, high-rises, and complex urban buildings.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            Justin has delivered luxury interior renovations at some of Boston&rsquo;s
-            most distinguished residential addresses — including One Dalton Street,
-            100 Sudbury, The Intercontinental Boston, The Clarendon, and historic
-            brownstones along Beacon Street and Commonwealth Avenue in Beacon Hill
-            and Back Bay.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            That work built a deep understanding of what these buildings require:
-            the management protocols, the standards of fit and finish, the service
-            entrance requirements, and the level of care their residents expect.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            BHI didn&rsquo;t learn to work in Boston&rsquo;s finest buildings. It was built
-            there. That background shapes everything about how we operate: the
-            standard we hold our work to, the way we move through managed
-            buildings, and the professional eye we bring to every home we care for.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            We are not a volume-based service company. We are intentionally small,
-            selective, and relationship-driven. Every engagement begins with
-            understanding the home, the client&rsquo;s expectations, and the level of
-            care required.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            From recurring cleaning and interior painting to vendor coordination,
-            seasonal refreshes, and private home services, our role is to bring
-            calm, disciplined execution to the details that make a home feel truly
-            cared for.
-          </p>
-          <p
-            className="text-[16px] leading-[1.95]"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-          >
-            Clients choose Beacon Hill Interiors because they want confidence without
-            supervision. They want clear communication, clean work, consistent
-            standards, and a team that respects the home as much as they do.
+            BHI is intentionally small. We take on a limited number of clients and
+            engagements — enough to do the work correctly and stay accountable, not
+            so many that quality becomes impossible to maintain.
           </p>
         </div>
       </section>
@@ -170,8 +140,8 @@ export default function AboutPage() {
             className="text-[22px] md:text-[30px] lg:text-[34px] italic leading-[1.55] text-center"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            &ldquo;A well-maintained home is not just clean. It is protected, organized,
-            cared for, and quietly under control. That is the standard we work to.&rdquo;
+            &ldquo;We are not trying to be the biggest service company in Boston. We
+            are trying to be the best one for the clients we take on.&rdquo;
           </p>
           <p
             className="mt-8 text-[13px] uppercase tracking-[0.2em] text-center"
@@ -203,13 +173,13 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── PRINCIPLES ───────────────────────────────────────────────── */}
+      {/* ── CREDENTIALS ──────────────────────────────────────────────── */}
       <section className="bg-bhi-white py-24 md:py-32">
         <div className="max-w-6xl mx-auto px-8">
-          <SectionLabel className="mb-14">How We Work</SectionLabel>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
-            {principles.map((p) => (
-              <div key={p.title}>
+          <SectionLabel className="mb-14">The Credentials</SectionLabel>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16">
+            {credentials.map((c) => (
+              <div key={c.title}>
                 <GoldRule className="mb-5" />
                 <p
                   className="text-[10px] uppercase tracking-[0.2em] mb-4"
@@ -218,7 +188,7 @@ export default function AboutPage() {
                     color: "var(--bhi-gold)",
                   }}
                 >
-                  {p.title}
+                  {c.title}
                 </p>
                 <p
                   className="text-[15px] leading-[1.8]"
@@ -227,7 +197,7 @@ export default function AboutPage() {
                     color: "var(--bhi-warm-gray)",
                   }}
                 >
-                  {p.body}
+                  {c.body}
                 </p>
               </div>
             ))}
@@ -235,41 +205,67 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* ── CONTACT CTA ──────────────────────────────────────────────── */}
+      {/* ── AREAS SERVED ─────────────────────────────────────────────── */}
       <section
-        className="py-24 md:py-32"
+        className="py-20 md:py-28"
         style={{ backgroundColor: "var(--bhi-linen)" }}
       >
         <div className="max-w-6xl mx-auto px-8">
-          <div className="max-w-2xl">
-            <SectionLabel className="mb-6">Inquire About Availability</SectionLabel>
-            <h2
-              className="text-[28px] md:text-[40px] uppercase tracking-[0.06em] leading-[1.2] mb-8"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+          <SectionLabel className="mb-8">Areas Served</SectionLabel>
+          <div className="flex flex-wrap gap-x-8 gap-y-3">
+            {areas.map((area) => (
+              <span
+                key={area}
+                className="text-[13px] uppercase tracking-[0.15em]"
+                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+              >
+                {area}
+              </span>
+            ))}
+            <span
+              className="text-[13px] uppercase tracking-[0.15em]"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
             >
-              Inquire About Availability
-            </h2>
-            <GoldRule className="mb-8" />
-            <p
-              className="text-[16px] leading-[1.8] mb-10"
-              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-            >
-              Beacon Hill Interiors accepts new client relationships selectively.
-              To explore whether we might be a good fit for your home, please
-              complete the form below.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
-              style={{
-                fontFamily: "var(--bhi-font-sans)",
-                backgroundColor: "var(--bhi-charcoal)",
-                color: "var(--bhi-white)",
-              }}
-            >
-              Inquire About Availability
-            </Link>
+              + Greater Boston
+            </span>
           </div>
+        </div>
+      </section>
+
+      {/* ── CONTACT CTA ──────────────────────────────────────────────── */}
+      <section
+        className="py-24 md:py-32"
+        style={{ backgroundColor: "var(--bhi-charcoal)" }}
+      >
+        <div className="max-w-6xl mx-auto px-8 flex flex-col items-center text-center">
+          <SectionLabel className="mb-6" style={{ color: "var(--bhi-gold)" }}>
+            Inquire
+          </SectionLabel>
+          <h2
+            className="text-[26px] md:text-[36px] leading-[1.2] mb-6 max-w-xl"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)" }}
+          >
+            Ready to talk?
+          </h2>
+          <GoldRule className="mb-8 max-w-xs w-full" style={{ opacity: 0.4 }} />
+          <p
+            className="text-[16px] leading-[1.8] mb-10 max-w-md"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-sand)" }}
+          >
+            Whether you have a specific project, a standing need, or just want to
+            understand whether BHI is the right fit — reach out.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
+            style={{
+              fontFamily: "var(--bhi-font-sans)",
+              backgroundColor: "var(--bhi-white)",
+              color: "var(--bhi-charcoal)",
+            }}
+          >
+            Contact Us
+          </Link>
         </div>
       </section>
     </>

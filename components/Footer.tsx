@@ -2,12 +2,17 @@ import Link from "next/link";
 import Logo from "./Logo";
 import GoldRule from "./GoldRule";
 
-const footerLinks = [
-  { href: "/services", label: "Services" },
+const serviceLinks = [
+  { href: "/residential", label: "Residential Interior Care" },
+  { href: "/commercial", label: "Commercial & Hospitality" },
+  { href: "/construction", label: "Interior Construction & Refresh" },
+  { href: "/punchlist", label: "Punch List & Closeout" },
+];
+
+const companyLinks = [
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
 ];
-
 
 export default function Footer() {
   return (
@@ -29,29 +34,24 @@ export default function Footer() {
             className="text-xs tracking-wide mt-2 italic"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-sand)" }}
           >
-            Private Home Services · Boston, Massachusetts
-          </p>
-          <p
-            className="text-xs tracking-wide mt-1 italic"
-            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-sand)" }}
-          >
-            Serving Boston, the Inner Suburbs, and Surrounding Communities
+            Private & Commercial Interior Services · Boston, Massachusetts
           </p>
         </div>
 
         <GoldRule className="mb-12 opacity-30" />
 
-        {/* Navigation + neighborhoods */}
+        {/* Navigation columns */}
         <div className="flex flex-col md:flex-row justify-between gap-10 mb-12">
+          {/* Services */}
           <div>
             <p
               className="text-[10px] uppercase tracking-[0.2em] mb-4"
               style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
             >
-              Navigation
+              Services
             </p>
-            <nav className="flex flex-col gap-2" aria-label="Footer navigation">
-              {footerLinks.map((link) => (
+            <nav className="flex flex-col gap-2" aria-label="Footer service navigation">
+              {serviceLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
@@ -64,6 +64,29 @@ export default function Footer() {
             </nav>
           </div>
 
+          {/* Company */}
+          <div>
+            <p
+              className="text-[10px] uppercase tracking-[0.2em] mb-4"
+              style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-sand)" }}
+            >
+              Company
+            </p>
+            <nav className="flex flex-col gap-2" aria-label="Footer company navigation">
+              {companyLinks.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-xs uppercase tracking-[0.15em] transition-opacity hover:opacity-60"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* Contact */}
           <div className="md:text-right">
             <p
               className="text-[10px] uppercase tracking-[0.2em] mb-4"
@@ -96,13 +119,21 @@ export default function Footer() {
 
         <GoldRule className="mb-8 opacity-20" />
 
-        {/* Copyright */}
-        <p
-          className="text-center text-[11px] tracking-wide"
-          style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
-        >
-          © 2026 Beacon Hill Interiors. By referral and by standard.
-        </p>
+        {/* Bottom bar */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+          <p
+            className="text-[11px] tracking-wide"
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-warm-gray)" }}
+          >
+            © 2026 Beacon Hill Interiors. Licensed · Insured · Building-Compliant.
+          </p>
+          <p
+            className="text-[11px] italic tracking-wide"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            One team. Four capabilities. One point of accountability.
+          </p>
+        </div>
       </div>
     </footer>
   );

@@ -143,14 +143,11 @@ export default function ContactPage() {
                   }}
                 >
                   <option value="" disabled>Select a service</option>
-                  <option value="Recurring Interior Care & Cleaning">Recurring Interior Care &amp; Cleaning</option>
-                  <option value="Interior Painting & Refresh">Interior Painting &amp; Refresh</option>
-                  <option value="One-Time Interior Cleaning">One-Time Interior Cleaning</option>
-                  <option value="Pre-Sale Preparation">Pre-Sale Preparation</option>
-                  <option value="Move-In / Move-Out Service">Move-In / Move-Out Service</option>
-                  <option value="Private Home Services">Private Home Services</option>
-                  <option value="Realtor / Partner Inquiry">Realtor / Partner Inquiry</option>
-                  <option value="Interior Designer Inquiry">Interior Designer Inquiry</option>
+                  <option value="Residential Interior Care">Residential Interior Care</option>
+                  <option value="Commercial & Hospitality">Commercial &amp; Hospitality</option>
+                  <option value="Interior Construction & Refresh">Interior Construction &amp; Refresh</option>
+                  <option value="Punch List & Construction Closeout">Punch List &amp; Construction Closeout</option>
+                  <option value="Not Sure Yet">Not Sure Yet</option>
                   <option value="General Inquiry">General Inquiry</option>
                 </select>
               </div>
