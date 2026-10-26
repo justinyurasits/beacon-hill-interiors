@@ -7,22 +7,92 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "Interior Construction & Refresh — Beacon Hill Interiors",
   description:
-    "Painting, routine repairs, drywall and finish carpentry, kitchen and bath refresh, and ongoing interior maintenance for Boston properties. Licensed. Done correctly the first time.",
+    "Painting, drywall and surface repairs, finish carpentry, kitchen and bath refreshes, and ongoing interior maintenance for Boston homes and managed properties. Done by a licensed team.",
 };
 
-const workItems = [
-  "Interior painting — rooms, ceilings, trim, millwork, doors",
-  "Paint touch-up programs for maintained residences",
-  "Routine repairs — the small items that accumulate in a lived-in or high-use space",
-  "Drywall repair — patching, skim coating, and a seamless repaint",
-  "Finish carpentry — trim, casing, baseboard, doors, shelving, and built-in adjustments",
-  "Kitchen cosmetic refresh — cabinet painting, hardware, backsplash",
-  "Bath refresh — tile, fixtures, caulking, accessories",
-  "Ongoing interior maintenance — scheduled upkeep for residences, rentals, and managed properties",
-  "Pre-sale preparation — full interior refresh before listing",
-  "Buyer reset — cleaning, painting, and refresh after closing",
-  "Tenant turnover — full unit refresh between leases",
+const services = [
+  {
+    title: "Interior Painting & Finishing",
+    body: "Walls, ceilings, doors, trim, and architectural millwork. Full-room repaints or color-matched touch-ups that keep finishes looking deliberate, not patched.",
+  },
+  {
+    title: "Drywall & Surface Repairs",
+    body: "Patching, skim coating, surface prep, and repaint after damage, a renovation, an install, or ordinary wear. The wall goes back to looking like nothing happened.",
+  },
+  {
+    title: "Finish Carpentry & Interior Repairs",
+    body: "Doors, trim, baseboards, casings, shelving, cabinetry, and hardware — adjusted, repaired, and made to work and look finished again.",
+  },
+  {
+    title: "Kitchen & Bath Refreshes",
+    body: "Update a space without gutting it: cabinet painting, hardware, backsplash, caulking, and finish repairs. The cosmetic upgrade that buys years.",
+  },
+  {
+    title: "Ongoing Interior Maintenance",
+    body: "Scheduled touch-ups, repairs, and upkeep for residences, rentals, and managed buildings. We catch wear before it turns into a project.",
+  },
+  {
+    title: "Property Turnover & Pre-Sale Prep",
+    body: "Paint, drywall, finish corrections, minor upgrades, and a final clean to get a property listing-ready or move-in ready between occupants.",
+  },
 ];
+
+const audiences = [
+  {
+    title: "Homeowners & Condo Owners",
+    body: "The repairs, updates, and finishing that keep a home sharp — handled by one team instead of three trades you have to coordinate.",
+  },
+  {
+    title: "Property Managers & Investors",
+    body: "Ongoing upkeep, tenant turnover, and coordinated improvements across units and managed buildings, on a schedule you can plan around.",
+  },
+  {
+    title: "Realtors & Homebuyers",
+    body: "Pre-listing prep and post-closing work that makes a home show well and feel move-in ready.",
+  },
+  {
+    title: "General Contractors & Developers",
+    body: "Supplemental interior finishing and repairs when a project needs an extra licensed team on the details.",
+  },
+];
+
+const steps = [
+  {
+    n: "01",
+    title: "Tell Us What Needs Attention",
+    body: "Walk us through the repairs, maintenance, or improvements you're weighing.",
+  },
+  {
+    n: "02",
+    title: "Scope & Proposal",
+    body: "We assess the work and site conditions where needed, then set a clear scope, schedule, and price.",
+  },
+  {
+    n: "03",
+    title: "Execution",
+    body: "We do the work, protect the space around it, and leave a clean finish. For ongoing clients, we set a recurring schedule and agreed priorities.",
+  },
+];
+
+function Card({ title, body }: { title: string; body: string }) {
+  return (
+    <div style={{ border: "0.5px solid var(--bhi-sand)", padding: "32px 28px" }}>
+      <GoldRule className="mb-6" />
+      <p
+        className="text-[11px] uppercase tracking-[0.2em] mb-4"
+        style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
+      >
+        {title}
+      </p>
+      <p
+        className="text-[15px] leading-[1.8]"
+        style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+      >
+        {body}
+      </p>
+    </div>
+  );
+}
 
 export default function ConstructionPage() {
   return (
@@ -45,16 +115,16 @@ export default function ConstructionPage() {
             className="text-[36px] md:text-[52px] uppercase tracking-[0.06em] leading-[1.1] mb-6 max-w-2xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)", textShadow: "0 1px 4px rgba(0,0,0,0.4)" }}
           >
-            A Contractor Who Finishes What Others Start.
+            The Work Between a Cleaning and a Renovation.
           </h1>
           <p
             className="text-[17px] leading-[1.85] max-w-xl"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.85)" }}
           >
-            Interior painting, routine repairs, drywall and finish carpentry, kitchen
-            and bath refresh, and ongoing interior maintenance — for clients who need
-            it done correctly the first time and don&rsquo;t want to manage it
-            themselves.
+            Painting, repairs, finish carpentry, and selective improvements for
+            Boston homes and managed properties — the interior work that&rsquo;s too
+            involved for a cleaner and too small for a full renovation, done by a
+            licensed team that knows how these buildings are built.
           </p>
         </div>
       </section>
@@ -62,117 +132,56 @@ export default function ConstructionPage() {
       {/* WHAT THIS IS */}
       <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
         <div className="max-w-6xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-16 md:gap-24">
-            <div className="flex-1">
-              <SectionLabel className="mb-6">Interior Construction & Refresh</SectionLabel>
-              <h2
-                className="text-[26px] md:text-[34px] leading-[1.2] mb-8"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-              >
-                The work that falls between cleaning and full renovation.
-              </h2>
-              <GoldRule className="mb-8" />
-              <p
-                className="text-[16px] leading-[1.85] mb-6"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                BHI handles the interior work that most service companies don&rsquo;t
-                touch and most general contractors price too high. Painting a condo
-                before a sale. Refreshing a kitchen without gutting it. Replacing
-                hardware, updating fixtures, patching and repainting after tenants.
-                Patching drywall after a move. Re-hanging a door that hasn&rsquo;t closed
-                right in years. Touching up millwork on a brownstone that hasn&rsquo;t
-                been touched in five.
-              </p>
-              <p
-                className="text-[16px] leading-[1.85] mb-6"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                It doesn&rsquo;t have to be one-off. For owners and managers who want a
-                property kept right, BHI offers ongoing interior maintenance — routine
-                repairs, touch-ups, and finish work on a schedule, so small issues
-                never become visible ones.
-              </p>
-              <p
-                className="text-[16px] leading-[1.85]"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                This is selective, interior-focused construction and maintenance work —
-                done at a professional standard with a licensed team.
-              </p>
-            </div>
-
-            <div className="flex-1">
-              <p
-                className="text-[11px] uppercase tracking-[0.2em] mb-6"
-                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
-              >
-                What We Handle
-              </p>
-              <ul className="flex flex-col gap-4">
-                {workItems.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-[15px] leading-[1.75]"
-                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                  >
-                    <span
-                      className="shrink-0 mt-[0.55em]"
-                      style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "12px" }}
-                      aria-hidden="true"
-                    >
-                      —
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="max-w-2xl">
+            <SectionLabel className="mb-6">Interior Construction & Refresh</SectionLabel>
+            <h2
+              className="text-[26px] md:text-[34px] leading-[1.2] mb-8"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              Not every improvement needs a renovation.
+            </h2>
+            <GoldRule className="mb-8" />
+            <p
+              className="text-[16px] leading-[1.85] mb-6"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              A room that needs repainting. Drywall gouged during a move. A door that
+              won&rsquo;t close, worn trim, tired cabinetry, a unit that has to be right
+              before the next occupant. The jobs most service companies won&rsquo;t take
+              and a full GC won&rsquo;t bother with.
+            </p>
+            <p
+              className="text-[16px] leading-[1.85]"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              Beacon Hill Interiors handles the interior repairs, finishing, and
+              improvements that keep a property sharp — and for owners and managers
+              who&rsquo;d rather not chase small problems one at a time, we do it on an
+              ongoing basis, before wear becomes damage.
+            </p>
           </div>
         </div>
       </section>
 
-      {/* WHO CALLS US */}
+      {/* WHAT WE DO */}
       <section className="py-24 md:py-32 bg-bhi-white">
         <div className="max-w-6xl mx-auto px-8">
-          <SectionLabel className="mb-6">Who Calls Us for This</SectionLabel>
+          <SectionLabel className="mb-6">What We Do</SectionLabel>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
+            {services.map((item) => (
+              <Card key={item.title} {...item} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* WHO WE WORK WITH */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
+        <div className="max-w-6xl mx-auto px-8">
+          <SectionLabel className="mb-6">Who We Work With</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-            {[
-              {
-                title: "Sellers & Their Agents",
-                body: "A home that looks clean, fresh, and finished photographs and shows better. We handle the interior prep before the listing — painting, touch-ups, punch list items, and final detail.",
-              },
-              {
-                title: "Buyers",
-                body: "After closing, before furniture arrives. We make the home feel cared for, not inherited.",
-              },
-              {
-                title: "Property Owners & Investors",
-                body: "Between tenants, after renovations, or when a unit simply needs to be brought back to standard — or kept there with scheduled maintenance.",
-              },
-              {
-                title: "Developers & GCs",
-                body: "Interior finish work, paint corrections, and cosmetic completion when the project needs a professional eye on the details.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{ border: "0.5px solid var(--bhi-sand)", padding: "32px 28px" }}
-              >
-                <GoldRule className="mb-6" />
-                <p
-                  className="text-[11px] uppercase tracking-[0.2em] mb-4"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
-                >
-                  {item.title}
-                </p>
-                <p
-                  className="text-[15px] leading-[1.8]"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                >
-                  {item.body}
-                </p>
-              </div>
+            {audiences.map((item) => (
+              <Card key={item.title} {...item} />
             ))}
           </div>
         </div>
@@ -188,7 +197,7 @@ export default function ConstructionPage() {
             className="text-[26px] md:text-[34px] leading-[1.2] mb-8"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-white)" }}
           >
-            We understand interior work at a level most service providers don&rsquo;t.
+            We know how these interiors are built.
           </h2>
           <GoldRule className="mb-8" style={{ opacity: 0.3 }} />
           <p
@@ -197,18 +206,47 @@ export default function ConstructionPage() {
           >
             Justin Yurasits holds a Massachusetts Construction Supervisor License,
             and Beacon Hill Interiors is a registered Massachusetts Home Improvement
-            Contractor. That background shapes how we
-            approach interior work: with an understanding of surfaces, building
-            systems, and construction method that goes well beyond what a painting
-            company or cleaning crew brings.
+            Contractor. That means understanding how finishes are installed, how
+            materials behave, how to protect an occupied space, and how to work
+            inside buildings with strict access and operational rules.
           </p>
           <p
             className="text-[16px] leading-[1.85]"
             style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
           >
-            We also know when something requires a licensed trade — electrical,
-            plumbing, structural — and we won&rsquo;t pretend otherwise.
+            It also means knowing when a job needs a separately licensed trade —
+            electrical, plumbing, structural — and saying so, instead of pretending
+            otherwise.
           </p>
+        </div>
+      </section>
+
+      {/* HOW IT WORKS */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
+        <div className="max-w-6xl mx-auto px-8">
+          <SectionLabel className="mb-6">How It Works</SectionLabel>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 mt-10">
+            {steps.map((step) => (
+              <div key={step.n}>
+                <span
+                  className="text-xs tracking-[0.2em] uppercase"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                >
+                  {step.n}
+                </span>
+                <GoldRule className="my-5" />
+                <h3
+                  className="text-sm uppercase tracking-[0.15em] mb-4"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="text-[15px] leading-[1.75]" style={{ color: "var(--bhi-warm-gray)" }}>
+                  {step.body}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -225,6 +263,13 @@ export default function ConstructionPage() {
             Have an interior that needs attention?
           </h2>
           <GoldRule className="mb-8 max-w-xs w-full" style={{ opacity: 0.4 }} />
+          <p
+            className="text-[16px] leading-[1.8] mb-10 max-w-md"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-sand)" }}
+          >
+            From a single repair to a standing maintenance program, let&rsquo;s talk
+            about what the property needs.
+          </p>
           <Link
             href="/contact"
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
