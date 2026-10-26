@@ -14,7 +14,7 @@ export const metadata: Metadata = {
 const credentials = [
   {
     title: "Licensed Construction Background",
-    body: "Massachusetts Licensed Construction Supervisor and General Contractor. We understand interior work at a professional level — not just how it looks, but how it's built.",
+    body: "Justin holds a Massachusetts Construction Supervisor License, and Beacon Hill Interiors is a registered Massachusetts Home Improvement Contractor. We understand interior work at a professional level — not just how it looks, but how it's built.",
   },
   {
     title: "Managed Building Know-How",
@@ -109,8 +109,9 @@ export default function AboutPage() {
             manager and site superintendent in Boston&rsquo;s premier residential
             construction — running projects inside Back Bay brownstones, luxury
             high-rises, and landmark buildings, more than $30M in total project
-            value. He holds a Massachusetts Licensed Construction Supervisor license
-            and a General Contractor license.
+            value. He holds a Massachusetts Construction Supervisor License, and
+            Beacon Hill Interiors is a registered Massachusetts Home Improvement
+            Contractor.
           </p>
           <p
             className="text-[16px] leading-[1.95]"

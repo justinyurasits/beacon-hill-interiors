@@ -195,8 +195,9 @@ export default function ConstructionPage() {
             className="text-[16px] leading-[1.85] mb-6"
             style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
           >
-            Justin Yurasits holds a Massachusetts Licensed Construction Supervisor
-            license and a General Contractor license. That background shapes how we
+            Justin Yurasits holds a Massachusetts Construction Supervisor License,
+            and Beacon Hill Interiors is a registered Massachusetts Home Improvement
+            Contractor. That background shapes how we
             approach interior work: with an understanding of surfaces, building
             systems, and construction method that goes well beyond what a painting
             company or cleaning crew brings.
