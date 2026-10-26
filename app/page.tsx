@@ -250,9 +250,11 @@ export default function Home() {
                 className="text-[17px] leading-[1.85] mb-6"
                 style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
               >
-                Most service firms do one thing. We do four — and we do all of them
-                to the same standard: careful, thorough, and fully accountable from
-                start to finish.
+                Cleaning, maintenance, painting, and closeout usually mean four
+                companies, four schedules, and four people to chase. BHI is one — and
+                the difference isn&rsquo;t only convenience. We run the work with
+                construction discipline: it gets scoped, coordinated, and finished to
+                a standard, not just shown up for.
               </p>
               <p
                 className="text-[17px] leading-[1.85] mb-10"
