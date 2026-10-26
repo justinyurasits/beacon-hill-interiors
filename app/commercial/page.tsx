@@ -41,7 +41,7 @@ const whatWeHandle = [
 const differentiators = [
   {
     title: "Consistent, Inspection-Ready Results",
-    body: "The standard you set is the standard you get, every visit. No rotating crews, no quality that drifts when you stop watching.",
+    body: "The standard you set is the standard you get, every visit — not quality that drifts when you stop watching.",
   },
   {
     title: "Responsive and Predictable",
