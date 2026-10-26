@@ -78,15 +78,14 @@ export default function ResidentialPage() {
                 className="text-[16px] leading-[1.85] mb-10"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                The same team, every visit. No strangers in your home, no rotating
-                crews, no one learning the space from scratch each time. You establish
-                the standard once. We hold it.
+                A consistent team who knows your home. No strangers learning the space
+                from scratch each time. You establish the standard once. We hold it.
               </p>
               <p
                 className="text-[16px] italic leading-[1.85]"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)" }}
               >
-                &ldquo;No rotating crews. No shortcuts. The same trusted team, every time.&rdquo;
+                &ldquo;No shortcuts. A consistent, trusted team, every time.&rdquo;
               </p>
             </div>
 
