@@ -7,18 +7,98 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "Residential Interior Care — Beacon Hill Interiors",
   description:
-    "Premium recurring cleaning and interior care for private residences in Boston. White-glove standard, consistent team, one accountable relationship.",
+    "Private interior care for Boston's brownstones, condominiums, and finest residences — recurring care, deep and seasonal resets, and move-in and move-out detail. One point of accountability.",
 };
 
-const includes = [
-  "Full interior cleaning to a white-glove standard",
-  "Kitchen — surfaces, appliances, under-cabinet detail",
-  "Baths — full detail including fixtures, tile, and glass",
-  "Living and dining areas, bedrooms",
-  "Floors, baseboards, trim, and millwork",
-  "Seasonal deep-clean and periodic refresh options",
-  "Discreet, W-2 employed service professionals",
+const services = [
+  {
+    title: "Recurring Home Care",
+    body: "Weekly, biweekly, or a cadence built around your home. Kitchens, baths, living spaces, floors, and the millwork and finishes that make the house distinctive — kept to a consistent standard, visit after visit.",
+  },
+  {
+    title: "Deep & Seasonal Care",
+    body: "Intensive, detailed work for what everyday upkeep doesn't reach: cabinetry, fixtures, tile, trim, baseboards. Right for a seasonal reset, before an event, or to establish a baseline before recurring care begins.",
+  },
+  {
+    title: "Move-In & Move-Out",
+    body: "Full detail for a residence between occupants — before you move in, after you move out, or to prepare a listing for photography, staging, or showings. For homeowners, realtors, and property managers.",
+  },
 ];
+
+const audiences = [
+  {
+    title: "Private Homes & Brownstones",
+    body: "Boston residences with historic detail, fine finishes, and their own maintenance demands — cared for by people who understand what that requires.",
+  },
+  {
+    title: "Luxury Condominiums",
+    body: "Service for condominium owners, including direct coordination with building management where access, COI, and contractor requirements apply.",
+  },
+  {
+    title: "Realtors & Property Managers",
+    body: "Responsive care and property preparation for listings, transitions, and residences between occupants.",
+  },
+];
+
+const reasons = [
+  {
+    title: "Care for the Details",
+    body: "Hardwood, custom millwork, stone, tile, finished surfaces — different materials need different handling, and we treat them that way.",
+  },
+  {
+    title: "A Standard You Can Count On",
+    body: "We agree the scope and priorities up front and deliver consistent results every visit, with one point of accountability for the work.",
+  },
+  {
+    title: "More Than Cleaning",
+    body: "A licensed construction background means we don't just clean. We handle minor repairs, touch-up paint, and interior refresh as part of the same relationship, when you need it.",
+  },
+];
+
+const steps = [
+  {
+    n: "01",
+    title: "Inquiry",
+    body: "Tell us about your home, what you need, and the schedule you'd want.",
+  },
+  {
+    n: "02",
+    title: "Walkthrough & Proposal",
+    body: "For recurring or more involved work, we assess the space, agree priorities, and set a clear scope and price.",
+  },
+  {
+    n: "03",
+    title: "Service & Ongoing Care",
+    body: "We deliver the agreed work, keep you in the loop, and adjust the plan as your needs change.",
+  },
+];
+
+function CardGrid({ items }: { items: { title: string; body: string }[] }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {items.map((item) => (
+        <div
+          key={item.title}
+          style={{ border: "0.5px solid var(--bhi-sand)", padding: "32px 28px" }}
+        >
+          <GoldRule className="mb-6" />
+          <p
+            className="text-[11px] uppercase tracking-[0.2em] mb-4"
+            style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
+          >
+            {item.title}
+          </p>
+          <p
+            className="text-[15px] leading-[1.8]"
+            style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+          >
+            {item.body}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
+}
 
 export default function ResidentialPage() {
   return (
@@ -47,9 +127,9 @@ export default function ResidentialPage() {
             className="text-[17px] leading-[1.85] max-w-xl"
             style={{ fontFamily: "var(--bhi-font)", color: "rgba(255,255,255,0.85)" }}
           >
-            Beacon Hill Interiors provides private, recurring interior care for Boston
-            residences where the standard is non-negotiable — brownstones,
-            condominiums, and private homes in the city&rsquo;s finest neighborhoods.
+            Private interior care for Boston&rsquo;s brownstones, condominiums, and
+            finest residences — from recurring upkeep to a detailed reset before a
+            move or a season. Built around your home and the standard you hold it to.
           </p>
         </div>
       </section>
@@ -57,107 +137,82 @@ export default function ResidentialPage() {
       {/* WHAT THIS IS */}
       <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
         <div className="max-w-6xl mx-auto px-8">
-          <div className="flex flex-col md:flex-row gap-16 md:gap-24">
-            <div className="flex-1">
-              <SectionLabel className="mb-6">Residential Interior Care</SectionLabel>
-              <h2
-                className="text-[26px] md:text-[34px] leading-[1.2] mb-8"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
-              >
-                Not a cleaning service in the ordinary sense.
-              </h2>
-              <GoldRule className="mb-8" />
-              <p
-                className="text-[16px] leading-[1.85] mb-6"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                This is a private, recurring care program — built around your home,
-                your schedule, and the specific way you want your residence maintained.
-              </p>
-              <p
-                className="text-[16px] leading-[1.85] mb-10"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-              >
-                A consistent team who knows your home. No strangers learning the space
-                from scratch each time. You establish the standard once. We hold it.
-              </p>
-              <p
-                className="text-[16px] italic leading-[1.85]"
-                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)" }}
-              >
-                &ldquo;No shortcuts. A consistent, trusted team, every time.&rdquo;
-              </p>
-            </div>
-
-            <div className="flex-1">
-              <p
-                className="text-[11px] uppercase tracking-[0.2em] mb-6"
-                style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
-              >
-                What It Includes
-              </p>
-              <ul className="flex flex-col gap-4">
-                {includes.map((item) => (
-                  <li
-                    key={item}
-                    className="flex items-start gap-3 text-[15px] leading-[1.75]"
-                    style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
-                  >
-                    <span
-                      className="shrink-0 mt-[0.55em]"
-                      style={{ color: "var(--bhi-gold)", fontFamily: "var(--bhi-font-sans)", fontSize: "12px" }}
-                      aria-hidden="true"
-                    >
-                      —
-                    </span>
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="max-w-2xl">
+            <SectionLabel className="mb-6">Residential Interior Care</SectionLabel>
+            <h2
+              className="text-[26px] md:text-[34px] leading-[1.2] mb-8"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              Care, not commodity cleaning.
+            </h2>
+            <GoldRule className="mb-8" />
+            <p
+              className="text-[16px] leading-[1.85] mb-6"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              This is a care program built around your home — your schedule, your
+              priorities, the way you want the space kept — not a cleaning service
+              running a generic checklist.
+            </p>
+            <p
+              className="text-[16px] leading-[1.85] mb-10"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+            >
+              You set the standard once. We hold it: a defined scope, consistent
+              results, and one point of accountability for the work. If
+              something&rsquo;s off, you have a name to call, not a dispatch line.
+            </p>
+            <p
+              className="text-[16px] italic leading-[1.85]"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-gold)" }}
+            >
+              &ldquo;You set the standard once. We hold it.&rdquo;
+            </p>
           </div>
         </div>
       </section>
 
-      {/* WHO IT IS FOR */}
+      {/* RESIDENTIAL SERVICES */}
       <section className="py-24 md:py-32 bg-bhi-white">
+        <div className="max-w-6xl mx-auto px-8">
+          <SectionLabel className="mb-10">Residential Services</SectionLabel>
+          <CardGrid items={services} />
+        </div>
+      </section>
+
+      {/* WHO IT IS FOR */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
         <div className="max-w-6xl mx-auto px-8">
           <SectionLabel className="mb-6">Who It&rsquo;s For</SectionLabel>
           <h2
             className="text-[26px] md:text-[34px] leading-[1.2] mb-10 max-w-2xl"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
           >
-            For those who want their home cared for — without managing the logistics.
+            For distinctive homes.
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Private Homeowners",
-                body: "Busy professionals, frequent travelers, and owners of Boston condominiums and townhomes who expect their home maintained to an exceptional standard.",
-              },
-              {
-                title: "Pre-Sale & Move-In",
-                body: "Realtors and sellers preparing before photography, staging, or listing. Buyers resetting a home after closing. Property managers turning over a unit.",
-              },
-              {
-                title: "Managed Buildings",
-                body: "Condominiums and residences in managed buildings across Boston. We coordinate directly with building management — access, protocols, COI requirements handled.",
-              },
-            ].map((item) => (
-              <div
-                key={item.title}
-                style={{ border: "0.5px solid var(--bhi-sand)", padding: "32px 28px" }}
-              >
-                <GoldRule className="mb-6" />
+          <CardGrid items={audiences} />
+        </div>
+      </section>
+
+      {/* WHY BHI */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: "#252525" }}>
+        <div className="max-w-6xl mx-auto px-8">
+          <SectionLabel className="mb-10" style={{ color: "var(--bhi-gold)" }}>
+            Why Beacon Hill Interiors
+          </SectionLabel>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
+            {reasons.map((item) => (
+              <div key={item.title}>
+                <GoldRule className="mb-5" style={{ opacity: 0.3 }} />
                 <p
-                  className="text-[11px] uppercase tracking-[0.2em] mb-4"
-                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-charcoal)" }}
+                  className="text-[11px] uppercase tracking-[0.2em] mb-3"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
                 >
                   {item.title}
                 </p>
                 <p
                   className="text-[15px] leading-[1.8]"
-                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+                  style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
                 >
                   {item.body}
                 </p>
@@ -172,23 +227,7 @@ export default function ResidentialPage() {
         <div className="max-w-6xl mx-auto px-8">
           <SectionLabel className="mb-6">How It Works</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16 mt-10">
-            {[
-              {
-                n: "01",
-                title: "Inquiry",
-                body: "Reach out. We'll respond promptly and schedule a brief conversation to understand your home and what you're looking for.",
-              },
-              {
-                n: "02",
-                title: "Walkthrough",
-                body: "We visit your home, assess the space, and build a care program around what you actually need — frequency, scope, and specific priorities.",
-              },
-              {
-                n: "03",
-                title: "Ongoing Service",
-                body: "We show up when scheduled. We hold the standard we agreed to. We communicate proactively if anything changes.",
-              },
-            ].map((step) => (
+            {steps.map((step) => (
               <div key={step.n}>
                 <span
                   className="text-xs tracking-[0.2em] uppercase"
@@ -229,15 +268,15 @@ export default function ResidentialPage() {
             className="text-[16px] leading-[1.8] mb-10 max-w-md"
             style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-sand)" }}
           >
-            Beacon Hill Interiors accepts new residential clients selectively.
-            Reach out to begin the conversation.
+            Whether it&rsquo;s dependable ongoing care or preparing a residence for
+            its next chapter, let&rsquo;s talk about what your home needs.
           </p>
           <Link
             href="/contact"
             className="inline-block text-[10px] uppercase tracking-[0.2em] px-8 py-4 transition-opacity hover:opacity-80"
             style={{ fontFamily: "var(--bhi-font-sans)", backgroundColor: "var(--bhi-white)", color: "var(--bhi-charcoal)" }}
           >
-            Request a Proposal
+            Submit an Inquiry
           </Link>
         </div>
       </section>
