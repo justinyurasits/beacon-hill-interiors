@@ -29,7 +29,7 @@ const pillars = [
     n: "03",
     href: "/construction",
     label: "Interior Construction & Refresh",
-    image: "/images/painting.webp",
+    image: "/images/construction-work.webp",
     body: "Painting, routine repairs, drywall and finish carpentry, kitchen and bath refresh, and ongoing interior maintenance. Done correctly the first time.",
   },
   {

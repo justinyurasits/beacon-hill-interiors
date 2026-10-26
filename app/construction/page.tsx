@@ -32,7 +32,7 @@ export default function ConstructionPage() {
         className="relative flex flex-col justify-center pt-[72px]"
         style={{ minHeight: "max(480px, 65vh)" }}
       >
-        <Image src="/images/painting.webp" alt="" fill priority className="object-cover" />
+        <Image src="/images/construction-work.webp" alt="" fill priority className="object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.68)" }} />
         <div className="relative max-w-6xl mx-auto px-8 py-24 w-full">
           <p
