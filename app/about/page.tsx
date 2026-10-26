@@ -8,7 +8,7 @@ import SectionLabel from "@/components/SectionLabel";
 export const metadata: Metadata = {
   title: "About — Beacon Hill Interiors",
   description:
-    "A private interior services firm founded by a Massachusetts Licensed Construction Supervisor who spent years running high-end residential construction inside Boston's most demanding buildings.",
+    "A private interior services firm built on years of high-end residential construction inside Boston's most demanding buildings. Massachusetts Construction Supervisor License; registered Massachusetts Home Improvement Contractor.",
 };
 
 const credentials = [

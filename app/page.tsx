@@ -279,7 +279,7 @@ export default function Home() {
               {[
                 {
                   title: "Licensed & Experienced",
-                  body: "Justin holds a Massachusetts Construction Supervisor License, and BHI is a registered Home Improvement Contractor. We understand surfaces, systems, and standards at a level most service providers don't.",
+                  body: "Justin holds a Massachusetts Construction Supervisor License, and BHI is a registered Massachusetts Home Improvement Contractor. We understand surfaces, systems, and standards at a level most service providers don't.",
                 },
                 {
                   title: "Managed Building Ready",
