@@ -22,7 +22,7 @@ const pillars = [
     n: "02",
     href: "/commercial",
     label: "Commercial & Hospitality",
-    image: "/images/homeservices.webp",
+    image: "/images/commercial-hotel.webp",
     body: "Hotel rooms, common areas, managed buildings, and commercial interiors — cleaned and maintained to the standard your operation demands.",
   },
   {
