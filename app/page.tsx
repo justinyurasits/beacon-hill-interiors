@@ -36,7 +36,7 @@ const pillars = [
     n: "04",
     href: "/punchlist",
     label: "Punch List & Construction Closeout",
-    image: "/images/services.webp",
+    image: "/images/punchlist-detail.webp",
     body: "Final-phase support for contractors, developers, and property owners. We close the job out — cleanly, completely, and on schedule.",
   },
 ];

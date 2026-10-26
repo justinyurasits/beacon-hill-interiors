@@ -18,7 +18,7 @@ export default function PunchlistPage() {
         className="relative flex flex-col justify-center pt-[72px]"
         style={{ minHeight: "max(480px, 65vh)" }}
       >
-        <Image src="/images/services.webp" alt="" fill priority className="object-cover" />
+        <Image src="/images/punchlist-detail.webp" alt="" fill priority className="object-cover" />
         <div className="absolute inset-0" style={{ backgroundColor: "rgba(44,44,44,0.68)" }} />
         <div className="relative max-w-6xl mx-auto px-8 py-24 w-full">
           <p
