@@ -19,6 +19,63 @@ const builtFor = [
   "Multi-family residential buildings",
 ];
 
+const whatWeHandle = [
+  {
+    title: "Room Turns & Housekeeping",
+    body: "Fast, consistent room turns to hotel standard. Beds dressed properly, baths detailed, fixtures polished, floors finished — the room is guest-ready, not just clean.",
+  },
+  {
+    title: "Common Area Care",
+    body: "Lobbies, corridors, elevators, stairwells, and amenity spaces maintained on a set cadence. The first thing a guest or resident sees stays consistent, shift after shift.",
+  },
+  {
+    title: "Deep Cleaning & Resets",
+    body: "Scheduled deep cleans and between-tenant resets — carpet extraction, tile and grout detail, full kitchen and bath strip-downs — on a rotation that keeps the property ahead of wear.",
+  },
+  {
+    title: "Interior Upkeep & Repairs",
+    body: "Touch-up paint, minor drywall and finish repairs, fixture and hardware fixes handled in the same visit. One partner keeps the interior right instead of three vendors you have to coordinate.",
+  },
+];
+
+const differentiators = [
+  {
+    title: "Consistent, Inspection-Ready Results",
+    body: "The standard you set is the standard you get, every visit. No rotating crews, no quality that drifts when you stop watching.",
+  },
+  {
+    title: "Responsive and Predictable",
+    body: "One accountable contact, scheduling you can plan your operation around, and a fast response when something comes up — not a dispatch queue.",
+  },
+  {
+    title: "Managed-Building Fluent, Licensed & Insured",
+    body: "Service-entrance protocols, COI requirements, and elevator scheduling are second nature. General liability and workers' compensation on every engagement; certificate of insurance on request.",
+  },
+];
+
+const engagementSteps = [
+  {
+    n: "01",
+    title: "Walkthrough",
+    body: "We visit the property, learn the spaces, access requirements, and the standard you need held.",
+  },
+  {
+    n: "02",
+    title: "Scope & Service Plan",
+    body: "You get a written scope, a schedule, and clear responsibilities, with a certificate of insurance for building management.",
+  },
+  {
+    n: "03",
+    title: "Calibration Period",
+    body: "The first weeks are about dialing in to your standard and your building's rhythm. We adjust the plan until it's right.",
+  },
+  {
+    n: "04",
+    title: "Ongoing Service & Review",
+    body: "Service to the agreed standard, one point of contact, and a regular check-in. If the workload materially changes, we revisit scope and pricing openly — no surprises.",
+  },
+];
+
 export default function CommercialPage() {
   return (
     <>
@@ -86,13 +143,23 @@ export default function CommercialPage() {
                 should never notice the work happening.
               </p>
               <p
+                className="text-[16px] leading-[1.85] mb-6"
+                style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
+              >
+                For a hotel or property operator, the question isn&rsquo;t whether a
+                space can be cleaned — it&rsquo;s whether it&rsquo;s ready, every time,
+                without you having to check. BHI delivers consistent room and
+                common-area readiness to an agreed standard, on a schedule you can
+                plan around, with one person accountable for all of it.
+              </p>
+              <p
                 className="text-[16px] leading-[1.85]"
                 style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-warm-gray)" }}
               >
-                That is the discipline BHI brings to hotel rooms, lobbies, common
-                areas, and commercial interiors. We understand how managed buildings
-                and hospitality properties operate. We are not a commodity cleaning
-                operation, and we don&rsquo;t intend to become one.
+                And because we come out of construction, we handle more than
+                cleaning. Touch-up paint, minor repairs, and interior upkeep get done
+                as part of the same relationship — so you&rsquo;re not juggling a
+                cleaner, a handyman, and a painter to keep the property right.
               </p>
             </div>
 
@@ -131,24 +198,7 @@ export default function CommercialPage() {
         <div className="max-w-6xl mx-auto px-8">
           <SectionLabel className="mb-6">What We Handle</SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
-            {[
-              {
-                title: "Room Turns & Housekeeping",
-                body: "Fast, consistent room turns to hotel standard. Beds made properly, baths detailed, floors cleaned, fixtures polished.",
-              },
-              {
-                title: "Common Area Maintenance",
-                body: "Lobbies, corridors, elevator cabs, stairwells — cleaned on your schedule, maintained to the standard your residents and guests expect.",
-              },
-              {
-                title: "Deep Cleaning & Refresh",
-                body: "Periodic deep cleans between guests or tenants. Carpet extraction, grout and tile detail, full kitchen and bath strip-out.",
-              },
-              {
-                title: "Move-Out & Turnover Cleaning",
-                body: "Unit and room turnover cleaning between tenants or guests — fast turnaround, move-in ready standard.",
-              },
-            ].map((item) => (
+            {whatWeHandle.map((item) => (
               <div
                 key={item.title}
                 style={{ border: "0.5px solid var(--bhi-sand)", padding: "32px 28px" }}
@@ -179,20 +229,7 @@ export default function CommercialPage() {
             Why BHI for Commercial
           </SectionLabel>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-16">
-            {[
-              {
-                title: "One Accountable Contact",
-                body: "You work with one person. Not a call center. Not a dispatch queue. When something needs attention, you reach the person responsible.",
-              },
-              {
-                title: "Managed Building Know-How",
-                body: "Built on years running work inside Boston's landmark residential buildings — service entrance protocols, COI requirements, elevator scheduling, and building management relationships are second nature.",
-              },
-              {
-                title: "Licensed and Fully Insured",
-                body: "General liability. Workers' compensation. Certificate of insurance available on request for any building or property manager.",
-              },
-            ].map((item) => (
+            {differentiators.map((item) => (
               <div key={item.title}>
                 <GoldRule className="mb-5" style={{ opacity: 0.3 }} />
                 <p
@@ -206,6 +243,44 @@ export default function CommercialPage() {
                   style={{ fontFamily: "var(--bhi-font)", color: "#9A9490" }}
                 >
                   {item.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* HOW A COMMERCIAL ENGAGEMENT WORKS */}
+      <section className="py-24 md:py-32" style={{ backgroundColor: "var(--bhi-linen)" }}>
+        <div className="max-w-6xl mx-auto px-8">
+          <div className="mb-16">
+            <SectionLabel className="mb-6">The Engagement</SectionLabel>
+            <h2
+              className="text-[28px] md:text-[34px] uppercase tracking-[0.05em] leading-[1.2]"
+              style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+            >
+              How a Commercial Engagement Works
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12">
+            {engagementSteps.map((step) => (
+              <div key={step.n} className="flex flex-col">
+                <span
+                  className="text-xs tracking-[0.2em] uppercase mb-4"
+                  style={{ fontFamily: "var(--bhi-font-sans)", color: "var(--bhi-gold)" }}
+                >
+                  {step.n}
+                </span>
+                <GoldRule className="mb-6" />
+                <h3
+                  className="text-sm uppercase tracking-[0.15em] mb-4"
+                  style={{ fontFamily: "var(--bhi-font)", color: "var(--bhi-charcoal)" }}
+                >
+                  {step.title}
+                </h3>
+                <p className="text-[15px] leading-[1.75]" style={{ color: "var(--bhi-warm-gray)" }}>
+                  {step.body}
                 </p>
               </div>
             ))}
